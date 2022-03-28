@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: 0d3797cfc3faa35488b52f8b99b80b3a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Bookman
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 852d082ad6db5bf458c9a81df6c93b2e, type: 3}
+  - {fileID: 12800000, guid: 697a6fef7e01a8f4d87ec7d1435b8ad0, type: 3}
+  - {fileID: 12800000, guid: 253ebfb646b0c2e4ab7750e5fbe654eb, type: 3}
+  - {fileID: 12800000, guid: 49746a1a6a0ad4747a470e28227b6c8b, type: 3}
+  - {fileID: 12800000, guid: 84a0ddbf6873d454797a3a632d3c727a, type: 3}
+  - {fileID: 12800000, guid: d50be6a2bbf81be438a47f867166b425, type: 3}
+  - {fileID: 12800000, guid: f83e6674b5636674ba597c8ea1429bfb, type: 3}
+  - {fileID: 12800000, guid: 81a1b403d90bb8b498c21315dd3e33dc, type: 3}
+  - {fileID: 12800000, guid: 07058a084845f044ca6397bac1903f39, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

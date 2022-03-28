@@ -43,17 +43,14 @@ public class _7updown_InputHandler : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.LogError("On Mouse down  ");
         ProjectRay();
     }
     void ProjectRay()
     {
         Vector3 origin = camera.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(origin, Vector3.forward * 100);
-        Debug.LogError("Project ray ");
         if (hit.collider != null)
         {
-            Debug.LogError("hit collided ");
             chipController.OnUserInput(hit.transform, hit.point);
         }
 

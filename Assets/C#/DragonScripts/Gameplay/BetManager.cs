@@ -56,6 +56,9 @@ namespace Dragon.Gameplay
             int amount = 0;
             switch (chipType)
             {
+                case Chip.Chip2:
+                    amount = 2;
+                    break;
                 case Chip.Chip10:
                     amount = 10;
                     break;

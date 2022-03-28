@@ -110,7 +110,8 @@ namespace Dragon.Gameplay
         public void OnWait(object data)
         {            
             StopCoroutines();
-            StartCoroutine(StartDragonAnim());           
+            StartCoroutine(StartDragonAnim());
+            StartCoroutine(UiHandler.Instance.StartVS_Animation());
             if (is_a_FirstRound) return;
             StopCoroutines();
             StartCoroutine(WaitCountdown());

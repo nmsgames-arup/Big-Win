@@ -9,13 +9,16 @@ using UnityEngine.UI;
 using Updown7.ServerStuff;
 using Updown7.Gameplay;
 using System;
+using UnityEngine.SceneManagement;
 
 namespace Updown7.UI
 {
 
     public class _7updown_UiHandler : MonoBehaviour
     {
+        public static _7updown_UiHandler Instance;
 
+        [SerializeField] Toggle chit2Btn;
         [SerializeField] Toggle chit10Btn;
         [SerializeField] Toggle chit50Btn;
         [SerializeField] Toggle chit100Btn;
@@ -38,11 +41,35 @@ namespace Updown7.UI
         _7updown_Timer timer;
         public GameObject mainUnite;
         float balance;
+        public Sprite[] frams;
+        public Sprite stopBetting;
+        public Sprite startBetting;
+        public Image countdownPanel;
+        public Image placeBets;
+        public Sprite[] placeBets_Frames;
+        public Sprite[] stopBets_Frames;
+        public float countdownSpeed=.25f;
+        public Button test;
+        public Sprite[] ServerImage_Frames;
+        public Image ServerImg;
+        public Sprite[] WaitTxt_Frames;
+        public Image WaitTxt_Img;
+        public Sprite[] WaitStar_Frames;
+        public Image WaitStar_Img;
+        public GameObject[] chipimg;
+
+
+        private void Awake()
+        {
+            Instance = this;
+        }
         private void Start()
         {
             playerbetvalue = 0;
             PlayerBet.text = "0";
-            currentChip = Chip.Chip10;
+            chipimg[0].SetActive(false);
+            currentChip = Chip.Chip2;
+            ChipImgSelect(0);
             betUiRefrence.Add(Spot.left, leftBets);
             betUiRefrence.Add(Spot.middle, middleBets);
             betUiRefrence.Add(Spot.right, rightBets);
@@ -50,19 +77,101 @@ namespace Updown7.UI
             placeBets.gameObject.SetActive(false);
             timer = mainUnite.GetComponent<_7updown_Timer>();
             //test.onClick.AddListener(() => StartCoroutine(StartCountDown()));
-            SoundManager.instance.PlayBackgroundMusic();
+            // SoundManager.instance.PlayBackgroundMusic();
             AddListeners();
             ResetUi();
             UpdateUi();
             //StartCoroutine(Loading());
         }
 
+        public IEnumerator StartplaceBets_Animation()
+        {
+            placeBets.gameObject.SetActive(true);
+            foreach (var item in placeBets_Frames)
+            {
+                placeBets.sprite = item;
+                yield return new WaitForSeconds(0.05f);
+            }
+            StopplaceBets_Animation();
+        }
+        public void StopplaceBets_Animation()
+        {
+            StopCoroutine(StartplaceBets_Animation());
+            placeBets.gameObject.SetActive(false);
+        }
+
+        public IEnumerator Start_StopBets_Animation()
+        {
+            placeBets.gameObject.SetActive(true);
+            foreach (var item in stopBets_Frames)
+            {
+                placeBets.sprite = item;
+                yield return new WaitForSeconds(0.05f);
+            }
+            Stop_StopBets_Animation();
+        }
+        public void Stop_StopBets_Animation()
+        {
+            StopCoroutine(Start_StopBets_Animation());
+            placeBets.gameObject.SetActive(false);
+        }
+
+        public IEnumerator StartServer_Animation()
+        {
+            ServerImg.gameObject.SetActive(true);
+            foreach (var item in ServerImage_Frames)
+            {
+                ServerImg.sprite = item;
+                yield return new WaitForSeconds(0.02f);
+            }
+            StopServer_Animation();
+        }
+        public void StopServer_Animation()
+        {
+            StopCoroutine(StartServer_Animation());
+            ServerImg.gameObject.SetActive(false);
+        }
+
+        public IEnumerator StartWaitStar_Animation()
+        {
+            WaitStar_Img.gameObject.SetActive(true);
+            foreach (var item in WaitStar_Frames)
+            {
+                WaitStar_Img.sprite = item;
+                yield return new WaitForSeconds(0.08f);
+            }
+            StopWaitStar_Animation();
+        }
+        public void StopWaitStar_Animation()
+        {
+            StopCoroutine(StartWaitStar_Animation());
+            WaitStar_Img.gameObject.SetActive(false);
+            StartCoroutine(StartWaitTxt_Animation());
+        }
+
+        public IEnumerator StartWaitTxt_Animation()
+        {
+            WaitTxt_Img.gameObject.SetActive(true);
+            foreach (var item in WaitTxt_Frames)
+            {
+                WaitTxt_Img.sprite = item;
+                yield return new WaitForSeconds(0.08f);
+            }
+            StartCoroutine(StartWaitTxt_Animation());
+        }
+        public void StopWaitTxt_Animation()
+        {
+            StopCoroutine(StartWaitTxt_Animation());
+            WaitTxt_Img.gameObject.SetActive(false);
+        }
+
         IEnumerator StartBetting()
         {
             placeBets.gameObject.SetActive(true);
             placeBets.sprite = startBetting;
+            StartCoroutine(StartplaceBets_Animation());
             yield return new WaitForSeconds(.5f);
-            placeBets.gameObject.SetActive(false);
+            // placeBets.gameObject.SetActive(false);
         }
         int leftTotalBets;
         int middleTotalBets;
@@ -115,32 +224,43 @@ namespace Updown7.UI
             chit10Btn.onValueChanged.AddListener((isOn) =>
             {
                 currentChip = Chip.Chip10;
+                ChipImgSelect(1);
                 // Debug.LogError("10 pressed  " + (float)currentChip + "  chip value   " + (float)Chip.Chip10);
             });
-            chit50Btn.onValueChanged.AddListener((isOn) =>
+            // chit50Btn.onValueChanged.AddListener((isOn) =>
+            // {
+            //     // Debug.LogError("50 pressed  ");
+            //     currentChip = Chip.Chip50;
+            // });
+            chit2Btn.onValueChanged.AddListener((isOn) =>
             {
                 // Debug.LogError("50 pressed  ");
-                currentChip = Chip.Chip50;
+                currentChip = Chip.Chip2;
+                ChipImgSelect(0);
             });
             chit100Btn.onValueChanged.AddListener((isOn) =>
             {
                 // Debug.LogError("100 pressed  ");
                 currentChip = Chip.Chip100;
+                ChipImgSelect(2);
             });
             chit500Btn.onValueChanged.AddListener((isOn) =>
             {
                 // Debug.LogError("500 pressed  ");
                 currentChip = Chip.Chip500;
+                ChipImgSelect(3);
             });
             chit1000Btn.onValueChanged.AddListener((isOn) =>
             {
                 // Debug.LogError("1000 pressed  ");
                 currentChip = Chip.Chip1000;
+                ChipImgSelect(4);
             });
             chit5000Btn.onValueChanged.AddListener((isOn) =>
             {
                 // Debug.LogError("5000 pressed  ");
                 currentChip = Chip.Chip5000;
+                ChipImgSelect(5);
             });
             timer.onCountDownStart += () =>
             {
@@ -149,10 +269,18 @@ namespace Updown7.UI
             };
             timer.startCountDown += () =>
             {
-                SoundManager.instance.PlayCountdown();
+                // SoundManager.instance.PlayCountdown();
                 StartCoroutine(StartCountDown());
             };
-            lobby.onClick.AddListener(() => sideMenu.ShowPopup());
+            // lobby.onClick.AddListener(() => sideMenu.ShowPopup());
+        }
+        public void ChipImgSelect(int ind)
+        {
+            for (int i = 0; i < chipimg.Length; i++)
+            {
+                chipimg[i].SetActive(false);
+            }
+            chipimg[ind].SetActive(true);
         }
        public void ResetUi()
         {
@@ -181,6 +309,12 @@ namespace Updown7.UI
             usernameTxt.text ="000"+ LocalPlayer.deviceId;
         }
 
+        public void ExitLobby()
+        {
+            ServerRequest.instance.socket.Emit(Events.onleaveRoom);
+            SceneManager.LoadScene("MainScene");
+        }
+
 
         [SerializeField] GameObject messagePopUP;
         [SerializeField] TMP_Text msgTxt;
@@ -188,11 +322,13 @@ namespace Updown7.UI
         {
             messagePopUP.SetActive(true);
             msgTxt.text = msg;
+            StartCoroutine(StartWaitStar_Animation());
         }
         public void HideMessage()
         {
             messagePopUP.SetActive(false);
             msgTxt.text = string.Empty;
+            StopWaitTxt_Animation();
         }
 
         private void OnApplicationQuit()
@@ -217,13 +353,6 @@ namespace Updown7.UI
             balance += win.winAmount;
             UpdateUi();
         }
-        public Sprite[] frams;
-        public Sprite stopBetting;
-        public Sprite startBetting;
-        public Image countdownPanel;
-        public Image placeBets;
-        public float countdownSpeed=.25f;
-        public Button test;
 
         IEnumerator StartCountDown()
         {
@@ -236,8 +365,9 @@ namespace Updown7.UI
             countdownPanel.gameObject.SetActive(false);
             placeBets.gameObject.SetActive(true);
             placeBets.sprite = stopBetting;
+            StartCoroutine(Start_StopBets_Animation());
             yield return new WaitForSeconds(0.5f);
-            placeBets.gameObject.SetActive(false);
+            // placeBets.gameObject.SetActive(false);
         }
 
         public Image loadingpnel;

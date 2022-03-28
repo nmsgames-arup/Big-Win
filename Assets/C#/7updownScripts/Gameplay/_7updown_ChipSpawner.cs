@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Shared;
+using Updown7.UI;
+
 namespace Updown7.Gameplay
 {
     class _7updown_ChipSpawner : MonoBehaviour
@@ -19,6 +21,7 @@ namespace Updown7.Gameplay
         public void Start()
         {
             timer = GetComponent<_7updown_Timer>();
+            chipContainer.Add(Chip.Chip2, chips[6]);
             chipContainer.Add(Chip.Chip10, chips[0]);
             chipContainer.Add(Chip.Chip50, chips[1]);
             chipContainer.Add(Chip.Chip100, chips[2]);
@@ -35,6 +38,7 @@ namespace Updown7.Gameplay
             // chip.GetComponent<SpriteRenderer>().sortingOrder = chipOrderInLayer++;
             chip.SetActive(true);
             chip.transform.position = spawnPostions[positinIndex].position;
+            StartCoroutine(_7updown_UiHandler.Instance.StartServer_Animation());
             return chip;
         }
 

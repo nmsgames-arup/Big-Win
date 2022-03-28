@@ -15,6 +15,7 @@ namespace Shared
     }
     public enum Chip
     {
+        Chip2 = 2,
         Chip10 = 10,
         Chip50 = 50,
         Chip100 = 100,

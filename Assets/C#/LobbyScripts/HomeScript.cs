@@ -21,14 +21,93 @@ public class HomeScript : MonoBehaviour
     AsyncOperation sevenupScene;
     public Image LobbyAnimpnel;
     public Sprite[] Lobbyframe;
+    public Sprite[] WOF_Frames;
+    public Image WOF_img;
+    public Sprite[] TVE_Frames;
+    public Image TVE_img;
+    public Sprite[] LuckyDice_Frames;
+    public Image LuckyDice_img;
+    public Sprite[] LuckyBall_Frames;
+    public Image LuckyBall_img;
+    public Sprite[] PokerKing_Frames;
+    public Image PokerKing_img;
+    public Text _loadingTxt;
     private void Awake()
     {
         Instance = this;
     }
     private void Start()
     {
-        StartCoroutine(Loading());
+        // StartCoroutine(Loading());
+        StartCoroutine(StartWOF_Animation());
+        StartCoroutine(StartTVE_Animation());
+        StartCoroutine(StartLuckyDice_Animation());
+        StartCoroutine(StartLuckyBall_Animation());
+        StartCoroutine(StartPokerKing_Animation());
     }
+
+    public IEnumerator StartWOF_Animation()
+    {
+        WOF_img.gameObject.SetActive(true);
+        foreach (var item in WOF_Frames)
+        {
+            WOF_img.sprite = item;
+            yield return new WaitForSeconds(0.015f);
+        }
+        // StartCoroutine(StartWOF_Animation());
+        StartCoroutine(StopWOF_Animation());
+    }
+
+    public IEnumerator StopWOF_Animation()
+    {
+        StopCoroutine(StartWOF_Animation());
+        yield return new WaitForSeconds(1.0f);
+        StartCoroutine(StartWOF_Animation());
+    }
+
+    public IEnumerator StartTVE_Animation()
+    {
+        TVE_img.gameObject.SetActive(true);
+        foreach (var item in TVE_Frames)
+        {
+            TVE_img.sprite = item;
+            yield return new WaitForSeconds(0.05f);
+        }
+        StartCoroutine(StartTVE_Animation());
+    }
+    public IEnumerator StartLuckyDice_Animation()
+    {
+        LuckyDice_img.gameObject.SetActive(true);
+        foreach (var item in LuckyDice_Frames)
+        {
+            LuckyDice_img.sprite = item;
+            yield return new WaitForSeconds(0.05f);
+        }
+        StartCoroutine(StartLuckyDice_Animation());
+    }
+
+    public IEnumerator StartLuckyBall_Animation()
+    {
+        LuckyBall_img.gameObject.SetActive(true);
+        foreach (var item in LuckyBall_Frames)
+        {
+            LuckyBall_img.sprite = item;
+            yield return new WaitForSeconds(0.05f);
+        }
+        StartCoroutine(StartLuckyBall_Animation());
+    }
+
+    public IEnumerator StartPokerKing_Animation()
+    {
+        PokerKing_img.gameObject.SetActive(true);
+        foreach (var item in PokerKing_Frames)
+        {
+            PokerKing_img.sprite = item;
+            yield return new WaitForSeconds(0.05f);
+        }
+        StartCoroutine(StartPokerKing_Animation());
+    }
+
     IEnumerator Loading()
     {
         foreach (var item in Lobbyframe)
@@ -70,15 +149,16 @@ public class HomeScript : MonoBehaviour
 
     public void DragonBtn()
     {
-        AndroidToastMsg.ShowAndroidToastMessage("Loading");
+        _loadingTxt.gameObject.SetActive(true);
+        // AndroidToastMsg.ShowAndroidToastMessage("Loading");
         //sevenupScene.allowSceneActivation = false;
         //DragonScene.allowSceneActivation = true;
-        AndroidToastMsg.ShowAndroidToastMessage("Loading");
         SceneManager.LoadScene("DragonScene");
     }
     public void SevenUpBtn()
     {
-        AndroidToastMsg.ShowAndroidToastMessage("Loading");
+        _loadingTxt.gameObject.SetActive(true);
+        // AndroidToastMsg.ShowAndroidToastMessage("Loading");
         //DragonScene.allowSceneActivation = false;
         //sevenupScene.allowSceneActivation = true;
         SceneManager.LoadScene("7updown");
@@ -87,6 +167,12 @@ public class HomeScript : MonoBehaviour
     {
         AndroidToastMsg.ShowAndroidToastMessage("Loading");
         SceneManager.LoadScene("AndarBahar");
+    }
+    public void WheelOfFortune()
+    {
+        _loadingTxt.gameObject.SetActive(true);
+        // AndroidToastMsg.ShowAndroidToastMessage("Loading");
+        SceneManager.LoadScene("WheelOfFortune");
     }
     public void ShopBtn()
     {

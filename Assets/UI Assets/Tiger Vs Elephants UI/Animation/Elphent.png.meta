@@ -1,0 +1,996 @@
+fileFormatVersion: 2
+guid: 10585933d9298274eb3c1bd5f76c72ab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -925068653322093629
+    second: Elphent_0
+  - first:
+      213: 3980196528887682657
+    second: Elphent_1
+  - first:
+      213: 8404737970250362392
+    second: Elphent_2
+  - first:
+      213: 1060594733302694374
+    second: Elphent_3
+  - first:
+      213: 3651473817631698915
+    second: Elphent_4
+  - first:
+      213: 3839708226466443069
+    second: Elphent_5
+  - first:
+      213: -714270990665311886
+    second: Elphent_6
+  - first:
+      213: 4872478366384482919
+    second: Elphent_7
+  - first:
+      213: -7092837833387096398
+    second: Elphent_8
+  - first:
+      213: -7228789642322010119
+    second: Elphent_9
+  - first:
+      213: 5957452126316883104
+    second: Elphent_10
+  - first:
+      213: -886234399941758790
+    second: Elphent_11
+  - first:
+      213: 1781995178772756833
+    second: Elphent_12
+  - first:
+      213: 573098416575100148
+    second: Elphent_13
+  - first:
+      213: -8892713525335487187
+    second: Elphent_14
+  - first:
+      213: -7696548840414980676
+    second: Elphent_15
+  - first:
+      213: -2252754134265126325
+    second: Elphent_16
+  - first:
+      213: -6291194408440216598
+    second: Elphent_17
+  - first:
+      213: 8960614714642998027
+    second: Elphent_18
+  - first:
+      213: 3320064235977391432
+    second: Elphent_19
+  - first:
+      213: 3200725819726683309
+    second: Elphent_20
+  - first:
+      213: -7924323039347570801
+    second: Elphent_21
+  - first:
+      213: 1599962266297413540
+    second: Elphent_22
+  - first:
+      213: 63594626978149367
+    second: Elphent_23
+  - first:
+      213: -6268976428185864292
+    second: Elphent_24
+  - first:
+      213: -4027726664139778453
+    second: Elphent_25
+  - first:
+      213: 7840099087132062746
+    second: Elphent_26
+  - first:
+      213: -1520818061150780162
+    second: Elphent_27
+  - first:
+      213: -1374159209743186846
+    second: Elphent_28
+  - first:
+      213: -8804050740110446627
+    second: Elphent_29
+  - first:
+      213: -2431910324173387077
+    second: Elphent_30
+  - first:
+      213: 3184200225560585324
+    second: Elphent_31
+  - first:
+      213: -5955501863932304652
+    second: Elphent_32
+  - first:
+      213: 3451698000069710418
+    second: Elphent_33
+  - first:
+      213: 8675000891471082742
+    second: Elphent_34
+  - first:
+      213: 3327977671182294179
+    second: Elphent_35
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Elphent_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2750
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb33e506fe7923f0800000000000000
+      internalID: -925068653322093629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_1
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 2750
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 166d790b7af7c3730800000000000000
+      internalID: 3980196528887682657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_2
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2750
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ea20b57a0a3a470800000000000000
+      internalID: 8404737970250362392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_3
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 2750
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e148296a4df7be00800000000000000
+      internalID: 1060594733302694374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_4
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 2750
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3efa39e3714aca230800000000000000
+      internalID: 3651473817631698915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_5
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 2750
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f6dafc942694530800000000000000
+      internalID: 3839708226466443069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2200
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279170081566616f0800000000000000
+      internalID: -714270990665311886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_7
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 2200
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a6f1c32458e9340800000000000000
+      internalID: 4872478366384482919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_8
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2200
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b6c28be19d219d90800000000000000
+      internalID: -7092837833387096398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_9
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 2200
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff9f5dbe1e2eab90800000000000000
+      internalID: -7228789642322010119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_10
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 2200
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac638b152f1da250800000000000000
+      internalID: 5957452126316883104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_11
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 2200
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab07dbb328673b3f0800000000000000
+      internalID: -886234399941758790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1650
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16975367c2beab810800000000000000
+      internalID: 1781995178772756833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_13
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1650
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f43c4539fd04f700800000000000000
+      internalID: 573098416575100148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_14
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1650
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d01111a2cb69480800000000000000
+      internalID: -8892713525335487187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_15
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 1650
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb5de929b9d503590800000000000000
+      internalID: -7696548840414980676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_16
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 1650
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42a5dcec0c9cb0e0800000000000000
+      internalID: -2252754134265126325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_17
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 1650
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae34ff7840031b8a0800000000000000
+      internalID: -6291194408440216598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1100
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b032f6b8b9f7a5c70800000000000000
+      internalID: 8960614714642998027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_19
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1100
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d39e805dc331e20800000000000000
+      internalID: 3320064235977391432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_20
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1100
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dacda34cc234b6c20800000000000000
+      internalID: 3200725819726683309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_21
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 1100
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f878e3a3e26270290800000000000000
+      internalID: -7924323039347570801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_22
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 1100
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4afafa84435343610800000000000000
+      internalID: 1599962266297413540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_23
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 1100
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3f7aee9fee1e000800000000000000
+      internalID: 63594626978149367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 550
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c973fac272f1009a0800000000000000
+      internalID: -6268976428185864292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_25
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 550
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66549350f3aa18c0800000000000000
+      internalID: -4027726664139778453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_26
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 550
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14fe54c490adcc60800000000000000
+      internalID: 7840099087132062746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_27
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 550
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef40c11f708f4eae0800000000000000
+      internalID: -1520818061150780162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_28
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 550
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2640d66ba710eece0800000000000000
+      internalID: -1374159209743186846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_29
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 550
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddfa33b6f7ab1d580800000000000000
+      internalID: -8804050740110446627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba4a0ae17e104ed0800000000000000
+      internalID: -2431910324173387077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_31
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c64e14a0c3d803c20800000000000000
+      internalID: 3184200225560585324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_32
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f2632dbb9ec95da0800000000000000
+      internalID: -5955501863932304652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_33
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 0
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 252d41e0b05e6ef20800000000000000
+      internalID: 3451698000069710418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_34
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 0
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f4b452495bc36870800000000000000
+      internalID: 8675000891471082742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elphent_35
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 0
+        width: 700
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac904f3f0a5f2e20800000000000000
+      internalID: 3327977671182294179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

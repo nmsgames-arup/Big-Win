@@ -4,6 +4,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
+using System.Xml; //Needed for XML functionality
+using System.Xml.Serialization; //Needed for XML Functionality
+using System.Xml.Linq; //Needed for XDocument
 
 public class LoginScript : MonoBehaviour
 {
@@ -15,11 +19,16 @@ public class LoginScript : MonoBehaviour
     public GameObject SignUpPanel;
     string LoginURL = "https://jeetogame.in/jeeto_game/WebServices/loginPassword";    
     string GuestURL = "https://jeetogame.in/jeeto_game/WebServices/Guestlogin";
+    public List<string> _phoneno, _pwd;
+    public Dictionary<string, string> _completedata = new Dictionary<string, string>();
+    int _flag = 0;
+    public Text _errorMsg;
 
     private void Awake()
     {
         Instance = this;
     }
+
     public void ShowLoginUI()
     {
         LoginPanel.SetActive(true);
@@ -27,6 +36,35 @@ public class LoginScript : MonoBehaviour
     }
     public void LoginBtn()
     {
+        Debug.Log("mobile  " + Mobile.text + " pwd  " + Password.text);
+        for(int i = 0; i < _completedata.Count; i++)
+        {
+            Debug.Log(i + " no " + _completedata.ElementAt(i).Key + "  pwd  " + _completedata.ElementAt(i).Value );
+            if(Mobile.text == _completedata.ElementAt(i).Key && Password.text == _completedata.ElementAt(i).Value )
+            {
+                _flag = 1;
+                break;
+            }
+            else
+            {
+                _flag = 0;
+            }
+        }
+
+        if(_flag == 1)
+        {
+            _errorMsg.enabled = false;
+            string device_id = SystemInfo.deviceUniqueIdentifier;
+            GuestForm form = new GuestForm(device_id, "en");
+            WebRequestHandler.instance.Post(GuestURL, JsonUtility.ToJson(form), OnGuestRequestProcessed);    
+        }
+        else
+        {
+            _errorMsg.enabled = true;
+            Mobile.text = "";
+            Password.text = "";
+        }
+
         if (Mobile.text != "" && Password.text != "")
         {
             LoginForm form = new LoginForm(Mobile.text, Password.text, "en");

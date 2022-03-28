@@ -40,10 +40,26 @@ namespace Dragon.UI
         public Sprite stopBetting;
         public Sprite startBetting;
         public Image placeBets;
+        public Sprite[] placeBets_Frames;
+        public Sprite[] stopBets_Frames;
         public float countdownSpeed = .25f;
         public Text dragonBetsTxt;
         public Text tigerBetsTxt;
         public Text tieBetsTxt;
+        public Sprite[] characterFrames;
+        public Image characterImg;
+        public Sprite[] TigerFrames;
+        public Image TigerImg;
+        public Sprite[] ElephantFrames;
+        public Image ELephantImg;
+        public Sprite[] StartingVS_Frames;
+        public Image StartingVS_Img, StartAnimation_Panel;
+        public Sprite[] ServerImage_Frames;
+        public Image ServerImg;
+        public Sprite[] WaitTxt_Frames;
+        public Image WaitTxt_Img;
+        public Sprite[] WaitStar_Frames;
+        public Image WaitStar_Img;
         private void Awake()
         {
             Instance = this;
@@ -62,7 +78,142 @@ namespace Dragon.UI
             // balance = float.Parse(LocalPlayer.balance);
             balance = 10000f;
             UpdateUi();
-            StartCoroutine(Loading());
+            StartCoroutine(StartCharacterAnimation());
+            StartCoroutine(StartTigerAnimation());
+            StartCoroutine(StartElephantAnimation());
+            // StartCoroutine(Loading());
+        }
+
+        public IEnumerator StartCharacterAnimation()
+        {
+            characterImg.gameObject.SetActive(true);
+            foreach (var item in characterFrames)
+            {
+                characterImg.sprite = item;
+                yield return new WaitForSeconds(0.08f);
+            }
+            StartCoroutine(StartCharacterAnimation());
+        }
+
+        public IEnumerator StartTigerAnimation()
+        {
+            TigerImg.gameObject.SetActive(true);
+            foreach (var item in TigerFrames)
+            {
+                TigerImg.sprite = item;
+                yield return new WaitForSeconds(0.08f);
+            }
+            StartCoroutine(StartTigerAnimation());
+        }
+
+        public IEnumerator StartElephantAnimation()
+        {
+            ELephantImg.gameObject.SetActive(true);
+            foreach (var item in ElephantFrames)
+            {
+                ELephantImg.sprite = item;
+                yield return new WaitForSeconds(0.08f);
+            }
+            StartCoroutine(StartElephantAnimation());
+        }
+        public IEnumerator StartVS_Animation()
+        {
+            StartAnimation_Panel.gameObject.SetActive(true);
+            StartingVS_Img.gameObject.SetActive(true);
+            foreach (var item in StartingVS_Frames)
+            {
+                StartingVS_Img.sprite = item;
+                yield return new WaitForSeconds(0.08f);
+            }
+            StopVS_Animation();
+        }
+        public void StopVS_Animation()
+        {
+            StopCoroutine(StartVS_Animation());
+            StartingVS_Img.gameObject.SetActive(false);
+            StartAnimation_Panel.gameObject.SetActive(false);
+        }
+
+        public IEnumerator StartplaceBets_Animation()
+        {
+            placeBets.gameObject.SetActive(true);
+            foreach (var item in placeBets_Frames)
+            {
+                placeBets.sprite = item;
+                yield return new WaitForSeconds(0.05f);
+            }
+            StopplaceBets_Animation();
+        }
+        public void StopplaceBets_Animation()
+        {
+            StopCoroutine(StartplaceBets_Animation());
+            placeBets.gameObject.SetActive(false);
+        }
+
+        public IEnumerator Start_StopBets_Animation()
+        {
+            placeBets.gameObject.SetActive(true);
+            foreach (var item in stopBets_Frames)
+            {
+                placeBets.sprite = item;
+                yield return new WaitForSeconds(0.05f);
+            }
+            Stop_StopBets_Animation();
+        }
+        public void Stop_StopBets_Animation()
+        {
+            StopCoroutine(Start_StopBets_Animation());
+            placeBets.gameObject.SetActive(false);
+        }
+
+        public IEnumerator StartServer_Animation()
+        {
+            ServerImg.gameObject.SetActive(true);
+            foreach (var item in ServerImage_Frames)
+            {
+                ServerImg.sprite = item;
+                yield return new WaitForSeconds(0.02f);
+            }
+            StopServer_Animation();
+        }
+        public void StopServer_Animation()
+        {
+            StopCoroutine(StartServer_Animation());
+            ServerImg.gameObject.SetActive(false);
+        }
+
+        public IEnumerator StartWaitStar_Animation()
+        {
+            WaitStar_Img.gameObject.SetActive(true);
+            foreach (var item in WaitStar_Frames)
+            {
+                WaitStar_Img.sprite = item;
+                yield return new WaitForSeconds(0.08f);
+            }
+            StopWaitStar_Animation();
+        }
+        public void StopWaitStar_Animation()
+        {
+            StopCoroutine(StartWaitStar_Animation());
+            WaitStar_Img.gameObject.SetActive(false);
+            StartCoroutine(StartWaitTxt_Animation());
+        }
+
+
+        public IEnumerator StartWaitTxt_Animation()
+        {
+            WaitTxt_Img.gameObject.SetActive(true);
+            foreach (var item in WaitTxt_Frames)
+            {
+                WaitTxt_Img.sprite = item;
+                yield return new WaitForSeconds(0.08f);
+            }
+            StartCoroutine(StartWaitTxt_Animation());
+        }
+        public void StopWaitTxt_Animation()
+        {
+            StopCoroutine(StartWaitTxt_Animation());
+            WaitTxt_Img.gameObject.SetActive(false);
         }
 
         void SetupProfile()
@@ -74,9 +225,10 @@ namespace Dragon.UI
             ResetUi();
             dragonBetsTxt.text = "0";
             placeBets.gameObject.SetActive(true);
+            StartCoroutine(StartplaceBets_Animation());
             placeBets.sprite = startBetting;
             yield return new WaitForSeconds(.5f);
-            placeBets.gameObject.SetActive(false);
+            // placeBets.gameObject.SetActive(false);
         }
 
         int leftTotalBets;
@@ -131,7 +283,7 @@ namespace Dragon.UI
         public void UpDateBalance(float amount)
         {
             Debug.Log("balance updated");
-            StopLoading();
+            // StopLoading();
             isLoading = false;
             // balance = amount;
             balance = 10000f;
@@ -190,11 +342,13 @@ namespace Dragon.UI
         {
             messagePopUP.SetActive(true);
             msgTxt.text = msg;
+            StartCoroutine(StartWaitStar_Animation());
         }
         public void HideMessage()
         {
             messagePopUP.SetActive(false);
             msgTxt.text = string.Empty;
+            StopWaitTxt_Animation();
         }
 
         private void OnApplicationQuit()
@@ -226,8 +380,9 @@ namespace Dragon.UI
         {
             placeBets.gameObject.SetActive(true);
             placeBets.sprite = stopBetting;
+            StartCoroutine(Start_StopBets_Animation());
             yield return new WaitForSeconds(0.5f);
-            placeBets.gameObject.SetActive(false);
+            // placeBets.gameObject.SetActive(false);
         }
 
         public Image loadingpnel;
@@ -238,19 +393,19 @@ namespace Dragon.UI
         bool isLoading = true;
         IEnumerator Loading()
         {
-            loadingpnel.gameObject.SetActive(true);
-            foreach (var item in loadingFrames)
-            {
+            // loadingpnel.gameObject.SetActive(true);
+            // foreach (var item in loadingFrames)
+            // {
                 if (!isLoading) yield break;
-                loadingImag.sprite = item;
+                // loadingImag.sprite = item;
                 yield return new WaitForEndOfFrame();
-            }
-            StartCoroutine(Loading());
+            // }
+            // StartCoroutine(Loading());
         }
         public void StopLoading()
         {
-            StopCoroutine(Loading());
-            loadingpnel.gameObject.SetActive(false);
+            // StopCoroutine(Loading());
+            // loadingpnel.gameObject.SetActive(false);
         }
         public void ExitLobby()
         {

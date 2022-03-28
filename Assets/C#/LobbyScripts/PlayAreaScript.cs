@@ -62,6 +62,10 @@ public class PlayAreaScript : MonoBehaviour
         {
             UiHandler.Instance.currentChip = Chip.Chip50;
         }
+        else if (val == 2)
+        {
+            UiHandler.Instance.currentChip = Chip.Chip2;
+        }
         else if (val == 100)
         {
             UiHandler.Instance.currentChip = Chip.Chip100;

@@ -42,10 +42,10 @@ namespace KhushbuPlugin
         }      
         public void PlaySound(Sound sound, bool autoScaleVolume = true, float maxVolumeScale = 1f)
         {
-            if (!UtilityModel.GetSound())
-            {
-                return;
-            }
+            // if (!UtilityModel.GetSound())
+            // {
+            //     return;
+            // }
             StartCoroutine(CRPlaySound(sound, autoScaleVolume, maxVolumeScale));
         }
         public void PlayClockSound(Sound sound, bool isLoop = false)

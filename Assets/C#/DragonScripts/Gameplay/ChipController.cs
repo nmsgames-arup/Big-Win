@@ -70,15 +70,21 @@ namespace Dragon.Gameplay
             {
                 case Spot.left:
                     target.x = UnityEngine.Random.Range(LeftChipPos.transform.position.x - 0.5f , LeftChipPos.transform.position.x + 0.5f);
-                    target.y = UnityEngine.Random.Range(LeftChipPos.transform.localPosition.y - 0.5f , LeftChipPos.transform.localPosition.y + 0.5f);
+                    target.y = UnityEngine.Random.Range(LeftChipPos.GetComponent<RectTransform>().position.y - 0.5f, LeftChipPos.GetComponent<RectTransform>().position.y + 0.5f );
                     target.z = LeftChipPos.transform.position.z;
                     // target = LeftChipPos.transform.position;
                     break;
                 case Spot.middle:
-                    target = MiddleChipPos.transform.position;
+                    target.x = UnityEngine.Random.Range(MiddleChipPos.transform.position.x - 0.5f , MiddleChipPos.transform.position.x + 0.5f);
+                    target.y = UnityEngine.Random.Range(MiddleChipPos.GetComponent<RectTransform>().position.y - 0.1f, MiddleChipPos.GetComponent<RectTransform>().position.y + 0.1f );
+                    target.z = MiddleChipPos.transform.position.z;
+                    // target = MiddleChipPos.transform.position;
                     break;
                 case Spot.right:
-                    target = RightChipPos.transform.position;
+                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.5f , RightChipPos.transform.position.x + 0.5f);
+                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.5f, RightChipPos.GetComponent<RectTransform>().position.y + 0.5f );
+                    target.z = RightChipPos.transform.position.z;
+                    // target = RightChipPos.transform.position;
                     break;
                 default:
                     break;
@@ -121,15 +127,21 @@ namespace Dragon.Gameplay
             {
                 case Spot.left:
                     target.x = UnityEngine.Random.Range(LeftChipPos.transform.position.x - 0.5f , LeftChipPos.transform.position.x + 0.5f);
-                    target.y = UnityEngine.Random.Range(LeftChipPos.transform.localPosition.y - 0.5f , LeftChipPos.transform.localPosition.y + 0.5f);
+                    target.y = UnityEngine.Random.Range(LeftChipPos.GetComponent<RectTransform>().position.y - 0.5f, LeftChipPos.GetComponent<RectTransform>().position.y + 0.5f );
                     target.z = LeftChipPos.transform.position.z;
                     // target = LeftChipPos.transform.position;
                     break;
                 case Spot.middle:
-                    target = MiddleChipPos.transform.position;
+                    target.x = UnityEngine.Random.Range(MiddleChipPos.transform.position.x - 0.5f , MiddleChipPos.transform.position.x + 0.5f);
+                    target.y = UnityEngine.Random.Range(MiddleChipPos.GetComponent<RectTransform>().position.y - 0.1f, MiddleChipPos.GetComponent<RectTransform>().position.y + 0.1f );
+                    target.z = MiddleChipPos.transform.position.z;
+                    // target = MiddleChipPos.transform.position;
                     break;
                 case Spot.right:
-                    target = RightChipPos.transform.position;
+                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.5f , RightChipPos.transform.position.x + 0.5f);
+                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.5f, RightChipPos.GetComponent<RectTransform>().position.y + 0.5f );
+                    target.z = RightChipPos.transform.position.z;
+                    // target = RightChipPos.transform.position;
                     break;
                 default:
                     break;
@@ -202,16 +214,21 @@ namespace Dragon.Gameplay
             {
                 case Spot.left:
                     target.x = UnityEngine.Random.Range(LeftChipPos.transform.position.x - 0.5f , LeftChipPos.transform.position.x + 0.5f);
-                    // target.y = UnityEngine.Random.Range(LeftChipPos.transform.localPosition.y - 0.5f , LeftChipPos.transform.localPosition.y + 0.5f);
-                    target.y = LeftChipPos.transform.position.y;
+                    target.y = UnityEngine.Random.Range(LeftChipPos.GetComponent<RectTransform>().position.y - 0.5f, LeftChipPos.GetComponent<RectTransform>().position.y + 0.5f );
                     target.z = LeftChipPos.transform.position.z;
                     // target = LeftChipPos.transform.position;
                     break;
                 case Spot.middle:
-                    target = MiddleChipPos.transform.position;
+                    target.x = UnityEngine.Random.Range(MiddleChipPos.transform.position.x - 0.5f , MiddleChipPos.transform.position.x + 0.5f);
+                    target.y = UnityEngine.Random.Range(MiddleChipPos.GetComponent<RectTransform>().position.y - 0.1f, MiddleChipPos.GetComponent<RectTransform>().position.y + 0.1f );
+                    target.z = MiddleChipPos.transform.position.z;
+                    // target = MiddleChipPos.transform.position;
                     break;
                 case Spot.right:
-                    target = RightChipPos.transform.position;
+                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.5f , RightChipPos.transform.position.x + 0.5f);
+                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.5f, RightChipPos.GetComponent<RectTransform>().position.y + 0.5f );
+                    target.z = RightChipPos.transform.position.z;
+                    // target = RightChipPos.transform.position;
                     break;
                 default:
                     break;
@@ -232,15 +249,21 @@ namespace Dragon.Gameplay
             {
                 case Spot.left:
                     chipData.target.x = UnityEngine.Random.Range(LeftChipPos.transform.position.x - 0.5f , LeftChipPos.transform.position.x + 0.5f);
-                    chipData.target.y = UnityEngine.Random.Range(LeftChipPos.transform.localPosition.y - 0.5f , LeftChipPos.transform.localPosition.y + 0.5f);
+                    chipData.target.y = UnityEngine.Random.Range(LeftChipPos.GetComponent<RectTransform>().position.y - 0.5f, LeftChipPos.GetComponent<RectTransform>().position.y + 0.5f );
                     chipData.target.z = LeftChipPos.transform.position.z;
                     // chipData.target = LeftChipPos.transform.position;
                     break;
                 case Spot.middle:
-                    chipData.target = MiddleChipPos.transform.position;
+                    chipData.target.x = UnityEngine.Random.Range(MiddleChipPos.transform.position.x - 0.5f , MiddleChipPos.transform.position.x + 0.5f);
+                    chipData.target.y = UnityEngine.Random.Range(MiddleChipPos.GetComponent<RectTransform>().position.y - 0.1f, MiddleChipPos.GetComponent<RectTransform>().position.y + 0.1f );
+                    chipData.target.z = MiddleChipPos.transform.position.z;
+                    // chipData.target = MiddleChipPos.transform.position;
                     break;
                 case Spot.right:
-                    chipData.target = RightChipPos.transform.position;
+                    chipData.target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.5f , RightChipPos.transform.position.x + 0.5f);
+                    chipData.target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.5f, RightChipPos.GetComponent<RectTransform>().position.y + 0.5f );
+                    chipData.target.z = RightChipPos.transform.position.z;
+                    // chipData.target = RightChipPos.transform.position;
                     break;
                 default:
                     break;

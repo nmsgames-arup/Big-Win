@@ -63,11 +63,13 @@ public class _7updown_JarAnimation : MonoBehaviour
             distance = Vector3.Distance(desitnation.position, Jar.transform.position);
             distanceTravelled += speed * Time.deltaTime;
             Jar.transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
-            if (Jar.transform.localScale.x < .9f)
+            // if (Jar.transform.localScale.x < .9f)
+            if (Jar.transform.localScale.x < 1.4f)
                 Jar.transform.localScale = new Vector3(Jar.transform.localScale.x + scaleOffset, Jar.transform.localScale.y + scaleOffset);
             yield return new WaitForEndOfFrame();
         }
-        JarSpriteRenderer.transform.localScale = new Vector3(1.1f, 1.1f);
+        // JarSpriteRenderer.transform.localScale = new Vector3(1.1f, 1.1f);
+        JarSpriteRenderer.transform.localScale = new Vector3(1.6f, 1.6f);
         Sprite diceWinImg = leftSprites[0];
         foreach (var item in frams)
         {
@@ -99,6 +101,7 @@ public class _7updown_JarAnimation : MonoBehaviour
     {
         Jar.transform.position = initalPosition;
         JarSpriteRenderer.transform.localScale = new Vector3(.6f, .6f);
+        Jar.transform.localScale = new Vector3(0.6f, 0.6f);
         // AnimationJar.GetComponent<SpriteRenderer>().sprite = frams[0];
         AnimationJar.GetComponent<Image>().sprite = frams[0];
 

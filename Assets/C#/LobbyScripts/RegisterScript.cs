@@ -60,6 +60,9 @@ public class RegisterScript : MonoBehaviour
     }
     public void RegisterBtn()
     {
+        SessionXMLScript _sessionScript = FindObjectOfType<SessionXMLScript>();
+        _sessionScript.CreateXMLFile_data();
+        RegisterPanel.SetActive(false);
         //if (MobileNo.text != "" && OTP.text != "")
         if (MobileNo.text != "" && Password.text != "" && ReEnterPassword.text != "")
         {
@@ -105,15 +108,16 @@ public class RegisterScript : MonoBehaviour
         }
     
     }
-  /*  public void OTPVerifyBtn()
+   public void OTPVerifyBtn()
     {
         if (MobileNo.text != "")
         {
             string device_id = SystemInfo.deviceUniqueIdentifier;
-            RegisterForm form = new RegisterForm(MobileNo.text, device_id,Password.text, ReEnterPassword.text,"en");
+            // RegisterForm form = new RegisterForm(MobileNo.text, device_id,Password.text, ReEnterPassword.text,"en");
+            RegisterForm form = new RegisterForm(MobileNo.text, Password.text, ReEnterPassword.text,UserDetail.UserId, "en");
             WebRequestHandler.instance.Post(OTPURL, JsonUtility.ToJson(form), OnOtpVerifyRequestProcessed);
         }
-    }*/
+    }
     private void OnOtpVerifyRequestProcessed(string json, bool success)
     {
         LoginFormRoot responce = JsonUtility.FromJson<LoginFormRoot>(json);

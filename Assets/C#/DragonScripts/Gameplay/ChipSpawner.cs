@@ -2,6 +2,7 @@
 using Shared;
 using System.Collections.Generic;
 using UnityEngine;
+using Dragon.UI;
 
 
 namespace Dragon.Gameplay
@@ -25,6 +26,7 @@ namespace Dragon.Gameplay
         }
         public void Start()
         {
+            chipContainer.Add(Chip.Chip2, chips[6]);
             chipContainer.Add(Chip.Chip10, chips[0]);
             chipContainer.Add(Chip.Chip50, chips[1]);
             chipContainer.Add(Chip.Chip100, chips[2]);
@@ -39,6 +41,7 @@ namespace Dragon.Gameplay
             //chip.GetComponent<SpriteRenderer>().sortingOrder = chipOrderInLayer++;
             chip.SetActive(true);
             chip.transform.position = spawnPostions[positinIndex].position;
+            StartCoroutine(UiHandler.Instance.StartServer_Animation());
             return chip;
         }
 

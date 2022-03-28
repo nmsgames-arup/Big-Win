@@ -45,8 +45,8 @@ namespace Updown7.Gameplay
         {
             OnUserInput += CreateChip;
             OnServerResponse += CreateChipForOtherPlayers;
-            chipHolder.Add(Spot.right, leftParent);
-            chipHolder.Add(Spot.left, rightParent);
+            chipHolder.Add(Spot.left, leftParent);
+            chipHolder.Add(Spot.right, rightParent);
             chipHolder.Add(Spot.middle, middleParent);
             timer = GetComponent<_7updown_Timer>();
             timer.onTimeUp += () => isTimeUp = true;
@@ -74,20 +74,20 @@ namespace Updown7.Gameplay
             switch (spot)
             {
                 case Spot.left:
-                    target.x = UnityEngine.Random.Range(LeftChipPos.transform.position.x - 0.5f , LeftChipPos.transform.position.x + 0.5f);
-                    target.y = UnityEngine.Random.Range(LeftChipPos.transform.position.y - 0.5f , LeftChipPos.transform.position.y + 0.5f);
+                    target.x = UnityEngine.Random.Range(LeftChipPos.transform.position.x - 0.7f , LeftChipPos.transform.position.x + 0.7f);
+                    target.y = UnityEngine.Random.Range(LeftChipPos.GetComponent<RectTransform>().position.y - 0.7f, LeftChipPos.GetComponent<RectTransform>().position.y + 0.7f );
                     target.z = LeftChipPos.transform.position.z;
                     // target = LeftChipPos.transform.position;
                     break;
                 case Spot.middle:
-                    target.x = UnityEngine.Random.Range(MiddleChipPos.transform.position.x - 0.5f , MiddleChipPos.transform.position.x + 0.5f);
-                    target.y = UnityEngine.Random.Range(MiddleChipPos.transform.position.y - 0.5f , MiddleChipPos.transform.position.y + 0.5f);
+                    target.x = UnityEngine.Random.Range(MiddleChipPos.transform.position.x - 0.7f , MiddleChipPos.transform.position.x + 0.7f);
+                    target.y = UnityEngine.Random.Range(MiddleChipPos.GetComponent<RectTransform>().position.y - 0.1f, MiddleChipPos.GetComponent<RectTransform>().position.y + 0.1f );
                     target.z = MiddleChipPos.transform.position.z;
                     // target = MiddleChipPos.transform.position;
                     break;
                 case Spot.right:
-                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.5f , RightChipPos.transform.position.x + 0.5f);
-                    target.y = UnityEngine.Random.Range(RightChipPos.transform.position.y - 0.5f , RightChipPos.transform.position.y + 0.5f);
+                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.7f , RightChipPos.transform.position.x + 0.7f);
+                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.7f, RightChipPos.GetComponent<RectTransform>().position.y + 0.7f );
                     target.z = RightChipPos.transform.position.z;
                     // target = RightChipPos.transform.position;
                     break;
@@ -114,20 +114,20 @@ namespace Updown7.Gameplay
             switch (spot)
             {
                 case Spot.left:
-                    target.x = UnityEngine.Random.Range(LeftChipPos.transform.position.x - 0.5f , LeftChipPos.transform.position.x + 0.5f);
-                    target.y = UnityEngine.Random.Range(LeftChipPos.transform.position.y - 0.5f , LeftChipPos.transform.position.y + 0.5f);
+                    target.x = UnityEngine.Random.Range(LeftChipPos.transform.position.x - 0.7f , LeftChipPos.transform.position.x + 0.7f);
+                    target.y = UnityEngine.Random.Range(LeftChipPos.GetComponent<RectTransform>().position.y - 0.7f, LeftChipPos.GetComponent<RectTransform>().position.y + 0.7f );
                     target.z = LeftChipPos.transform.position.z;
                     // target = LeftChipPos.transform.position;
                     break;
                 case Spot.middle:
-                    target.x = UnityEngine.Random.Range(MiddleChipPos.transform.position.x - 0.5f , MiddleChipPos.transform.position.x + 0.5f);
-                    target.y = UnityEngine.Random.Range(MiddleChipPos.transform.position.y - 0.5f , MiddleChipPos.transform.position.y + 0.5f);
+                    target.x = UnityEngine.Random.Range(MiddleChipPos.transform.position.x - 0.7f , MiddleChipPos.transform.position.x + 0.7f);
+                    target.y = UnityEngine.Random.Range(MiddleChipPos.GetComponent<RectTransform>().position.y - 0.1f, MiddleChipPos.GetComponent<RectTransform>().position.y + 0.1f );
                     target.z = MiddleChipPos.transform.position.z;
                     // target = MiddleChipPos.transform.position;
                     break;
                 case Spot.right:
-                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.5f , RightChipPos.transform.position.x + 0.5f);
-                    target.y = UnityEngine.Random.Range(RightChipPos.transform.position.y - 0.5f , RightChipPos.transform.position.y + 0.5f);
+                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.7f , RightChipPos.transform.position.x + 0.7f);
+                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.7f, RightChipPos.GetComponent<RectTransform>().position.y + 0.7f );
                     target.z = RightChipPos.transform.position.z;
                     // target = RightChipPos.transform.position;
                     break;
@@ -155,7 +155,7 @@ namespace Updown7.Gameplay
             iTween.MoveTo(chip, iTween.Hash("position", target, "time", chipMovetime, "easetype", easeType));
             yield return new WaitForSeconds(chipMovetime);
             //scale up
-            SoundManager.instance.PlayClip("addchip");
+            SoundManager.instance.PlayClip("CoinAudio");
             // UtilitySound.Instance.addchipsound();
             iTween.PunchScale(chip, iTween.Hash("x", .1, "y",0.1f, "default", .1));
             
@@ -179,10 +179,11 @@ namespace Updown7.Gameplay
         }
         IEnumerator DestroyChips(Spot winnerSpot)
         {
-
+            Debug.LogError("spot  " + winnerSpot);
             foreach (var item in chipHolder)
             {
                 if (item.Key == winnerSpot) continue;
+                Debug.LogError("item " + item.Key);
                 foreach (Transform child in item.Value)
                 {
                     StartCoroutine(MoveChips(child, chipSecondLastSpot));
@@ -226,20 +227,19 @@ namespace Updown7.Gameplay
             switch (spot)
             {
                 case Spot.left:
-                    target.x = UnityEngine.Random.Range(LeftChipPos.transform.position.x - 0.5f , LeftChipPos.transform.position.x + 0.5f);
-                    target.y = UnityEngine.Random.Range(LeftChipPos.transform.position.y - 0.5f , LeftChipPos.transform.position.y + 0.5f);
+                    target.x = UnityEngine.Random.Range(LeftChipPos.transform.position.x - 0.7f , LeftChipPos.transform.position.x + 0.7f);
+                    target.y = UnityEngine.Random.Range(LeftChipPos.GetComponent<RectTransform>().position.y - 0.7f, LeftChipPos.GetComponent<RectTransform>().position.y + 0.7f );
                     target.z = LeftChipPos.transform.position.z;
                     // target = LeftChipPos.transform.position;
                     break;
                 case Spot.middle:
-                    target.x = UnityEngine.Random.Range(MiddleChipPos.transform.position.x - 0.5f , MiddleChipPos.transform.position.x + 0.5f);
-                    target.y = UnityEngine.Random.Range(MiddleChipPos.transform.position.y - 0.5f , MiddleChipPos.transform.position.y + 0.5f);
+                    target.x = UnityEngine.Random.Range(MiddleChipPos.transform.position.x - 0.7f , MiddleChipPos.transform.position.x + 0.7f);
+                    target.y = UnityEngine.Random.Range(MiddleChipPos.GetComponent<RectTransform>().position.y - 0.1f, MiddleChipPos.GetComponent<RectTransform>().position.y + 0.1f );
                     target.z = MiddleChipPos.transform.position.z;
-                    // target = MiddleChipPos.transform.position;
                     break;
                 case Spot.right:
-                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.5f , RightChipPos.transform.position.x + 0.5f);
-                    target.y = UnityEngine.Random.Range(RightChipPos.transform.position.y - 0.5f , RightChipPos.transform.position.y + 0.5f);
+                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.7f , RightChipPos.transform.position.x + 0.7f);
+                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.7f, RightChipPos.GetComponent<RectTransform>().position.y + 0.7f );
                     target.z = RightChipPos.transform.position.z;
                     // target = RightChipPos.transform.position;
                     break;
