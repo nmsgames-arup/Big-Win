@@ -18,7 +18,7 @@ namespace WOF.Gameplay
     class WOF_RoundWinningHandler : MonoBehaviour
     {
         public static WOF_RoundWinningHandler Instance;
-        [SerializeField] GameObject leftRing;
+        [SerializeField] GameObject LeftRing;
         [SerializeField] GameObject middleRing;
         [SerializeField] GameObject rightRing;
         public Sprite[] Imgs;
@@ -126,15 +126,15 @@ namespace WOF.Gameplay
         void mySpinComplete(){
             if (randNo == 0)//aniamtion add khusi
             {
-                StartCoroutine(ShowWinningRing( Spot.left ));//dragon
+                StartCoroutine(ShowWinningRing(LeftRing, Spot.left ));//dragon
             }
             else if (randNo == 1)
             {
-                StartCoroutine(ShowWinningRing( Spot.middle ));
+                StartCoroutine(ShowWinningRing(middleRing, Spot.middle ));
             }
             else
             {
-                StartCoroutine(ShowWinningRing( Spot.right ));
+                StartCoroutine(ShowWinningRing(rightRing, Spot.right ));
             }
             StartCoroutine(WOF_UiHandler.Instance.StartCoinAnimation());
             StartCoroutine(WOF_UiHandler.Instance.StartCoinBlinkAnimation());
@@ -188,10 +188,22 @@ namespace WOF.Gameplay
             yield return new WaitForSeconds(0.5f);
             Card2.sprite = Card[rand1].card[No2];
         }
-        IEnumerator ShowWinningRing( Spot winnerSpot )
+        IEnumerator ShowWinningRing( GameObject ring , Spot winnerSpot )
         {
+            yield return new WaitForSeconds(1f);
+
+            ring.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+            ring.SetActive(false);
+            yield return new WaitForSeconds(0.3f);
+            ring.SetActive(true);
+            yield return new WaitForSeconds(0.2f);
+            ring.SetActive(false);
+            yield return new WaitForSeconds(0.1f);
+            ring.SetActive(true);
             WOF_ChipController.Instance.TakeChipsBack(winnerSpot);
             yield return new WaitForSeconds(2f);
+            ring.SetActive(false);
         }
 
         /* Need to call below function of OnWin once api is integrated */

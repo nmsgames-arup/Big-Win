@@ -92,7 +92,8 @@ namespace WOF.Gameplay
             ServerRequest.instance.OnChipMove(target, chip, spot);
             betManager.AddBets(spot, WOF_UiHandler.Instance.currentChip);
             WOF_UiHandler.Instance.UpDateBets(spot, chip);
-            GameObject chipInstance = WOF_ChipSpawner.Instance.Spawn(0, chip, GetChipParent(spot));
+            // GameObject chipInstance = WOF_ChipSpawner.Instance.Spawn(0, chip, GetChipParent(spot));
+            GameObject chipInstance = WOF_ChipSpawner.Instance.Spawn(7, chip, GetChipParent(spot));
             StartCoroutine(MoveChip(chipInstance, target));
         }
         public void AddData(Spot spot, Vector3 target)

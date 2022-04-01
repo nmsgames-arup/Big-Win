@@ -31,11 +31,13 @@ public class LoginScript : MonoBehaviour
 
     public void ShowLoginUI()
     {
-        LoginPanel.SetActive(true);
+        // LoginPanel.SetActive(true);
+        LoginPanel.SetActive(false);
         LoginPanel1.SetActive(false);
     }
     public void LoginBtn()
     {
+        HomeScript.Instance.ShowHomeUI();
         Debug.Log("mobile  " + Mobile.text + " pwd  " + Password.text);
         for(int i = 0; i < _completedata.Count; i++)
         {

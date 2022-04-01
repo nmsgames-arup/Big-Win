@@ -7,14 +7,12 @@ public class RulesScript : MonoBehaviour
 {
     public static RulesScript Instance;
     public GameObject RulesPanel;
-    public Scrollbar scrollbar;
     private void Awake()
     {
         Instance = this;
     }
     public void ShowRulesUI()
     {
-        scrollbar.value = 1;
         RulesPanel.SetActive(true);
     }
     public void CloseRulesUI()

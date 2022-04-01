@@ -74,7 +74,7 @@ namespace KhushbuPlugin
             {
                 vol = vol / (float)(sound.simultaneousPlayCount);
             }
-            Debug.Log("Sound Clip Name " + sound.clip.name);
+            // Debug.Log("Sound Clip Name " + sound.clip.name);
             OtherAudioSource.PlayOneShot(sound.clip, vol);
             float delay = sound.clip.length * 0.7f;
             yield return new WaitForSeconds(delay);

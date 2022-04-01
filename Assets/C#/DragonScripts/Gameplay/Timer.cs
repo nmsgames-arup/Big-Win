@@ -137,6 +137,7 @@ namespace Dragon.Gameplay
             try
             {
                 InitialData cr = JsonConvert.DeserializeObject<InitialData>(data.ToString());
+                Debug.Log("data..  " + cr.balance);
                 UiHandler.Instance.UpDateBalance(float.Parse(cr.balance));
             }
             catch (Exception e)

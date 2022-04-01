@@ -179,11 +179,10 @@ namespace Updown7.Gameplay
         }
         IEnumerator DestroyChips(Spot winnerSpot)
         {
-            Debug.LogError("spot  " + winnerSpot);
             foreach (var item in chipHolder)
             {
                 if (item.Key == winnerSpot) continue;
-                Debug.LogError("item " + item.Key);
+
                 foreach (Transform child in item.Value)
                 {
                     StartCoroutine(MoveChips(child, chipSecondLastSpot));

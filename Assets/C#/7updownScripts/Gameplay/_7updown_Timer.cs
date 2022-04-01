@@ -11,7 +11,7 @@ namespace Updown7.Gameplay
 {
     public class _7updown_Timer : MonoBehaviour, ITimer
     {
-
+        public static _7updown_Timer Instance;
         int bettingTime = 15;
         int timeUpTimer = 10;
         int waitTimer = 3;
@@ -33,6 +33,11 @@ namespace Updown7.Gameplay
         IEnumerator onTimeUpcountDown;
         IEnumerator onWaitcountDown;
         public void StartCoundown() => StartCoroutine(countDown);
+
+        private void Awake()
+        {
+            Instance = this;
+        }
         void Start()
         {
             gamestate = gameState.cannotBet;
@@ -128,8 +133,8 @@ namespace Updown7.Gameplay
             uiHandler.ShowMessage("please wait for next round...");
             try
             {
-
                 InitialData cr = JsonConvert.DeserializeObject<InitialData>(data.ToString());
+                Debug.Log("data..  " + cr.balance);
                 uiHandler.UpDateBalance(float.Parse(cr.balance));
             }
             catch (Exception e)

@@ -28,8 +28,8 @@ public class PlayingScript : MonoBehaviour
     }
     private void Start()
     {
-        SFXButtons();
-        MusicButtons();
+        // SFXButtons();
+        // MusicButtons();
         StartCoroutine(LeftBellLoading(0.025f));
         StartCoroutine(RightBellLoading(0.015f));
     }
@@ -102,6 +102,21 @@ public class PlayingScript : MonoBehaviour
         else
         {
             MusicImg.sprite = MusicON;
+        }
+    }
+    public void SoundOnOff()
+    {
+        if(SoundImg.sprite == SoundOFF)
+        {
+            SoundImg.sprite = SoundON;
+            UtilitySound.Instance.AudioSource.mute = !UtilitySound.Instance.AudioSource.mute;
+            UtilitySound.Instance.OtherAudioSource.mute = !UtilitySound.Instance.OtherAudioSource.mute;
+        }
+        else
+        {
+            SoundImg.sprite = SoundOFF;
+            UtilitySound.Instance.AudioSource.mute = !UtilitySound.Instance.AudioSource.mute;
+            UtilitySound.Instance.OtherAudioSource.mute = !UtilitySound.Instance.OtherAudioSource.mute;
         }
     }
     IEnumerator LeftBellLoading(float value = 0f)

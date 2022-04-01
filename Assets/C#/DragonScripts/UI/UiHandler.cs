@@ -60,15 +60,23 @@ namespace Dragon.UI
         public Image WaitTxt_Img;
         public Sprite[] WaitStar_Frames;
         public Image WaitStar_Img;
+        int leftTotalBets;
+        int middleTotalBets;
+        int rightTotalBets;
+        int tigerBets;
+        int dragonBets;
+        int tieBetsBets;
         private void Awake()
         {
             Instance = this;
         }
         private void Start()
         {            
-            dragonBetsTxt.text = "0";
+            dragonBetsTxt.text = "Click to play";   //0
+            tigerBetsTxt.text = "Click to play";    //0
+            tieBetsTxt.text = "Click to play";      //0
             LocalPlayer.LoadGame();
-            currentChip = Chip.Chip10;
+            currentChip = Chip.Chip2;
             betUiRefrence.Add(Spot.left, leftBets);
             betUiRefrence.Add(Spot.middle, middleBets);
             betUiRefrence.Add(Spot.right, rightBets);
@@ -223,7 +231,9 @@ namespace Dragon.UI
         IEnumerator StartBetting()
         {
             ResetUi();
-            dragonBetsTxt.text = "0";
+            dragonBetsTxt.text = "Click to play";   //0
+            tigerBetsTxt.text = "Click to play";    //0
+            tieBetsTxt.text = "Click to play";      //0
             placeBets.gameObject.SetActive(true);
             StartCoroutine(StartplaceBets_Animation());
             placeBets.sprite = startBetting;
@@ -231,12 +241,6 @@ namespace Dragon.UI
             // placeBets.gameObject.SetActive(false);
         }
 
-        int leftTotalBets;
-        int middleTotalBets;
-        int rightTotalBets;
-        int tigerBets;
-        int dragonBets;
-        int tieBetsBets;
         public void UpDateBets(Spot spot, Chip chip)
         {
             string betValue = string.Empty;
@@ -304,7 +308,9 @@ namespace Dragon.UI
         public void ResetUi()
         {
             MainPlayer.Instance.totalBet = 0;
-            dragonBetsTxt.text = "0";
+            dragonBetsTxt.text = "Click to play";   //0
+            tigerBetsTxt.text = "Click to play";    //0
+            tieBetsTxt.text = "Click to play";      //0
             leftTotalBets = 0;
             middleTotalBets = 0;
             rightTotalBets = 0;
@@ -329,9 +335,30 @@ namespace Dragon.UI
             middleBets.text = middleTotalBets.ToString();
             rightBets.text = rightTotalBets.ToString();
             balanceTxt.text = balance.ToString();
-            dragonBetsTxt.text = dragonBets.ToString();
-            tieBetsTxt.text = tieBetsBets.ToString();
-            tigerBetsTxt.text = tigerBets.ToString();
+            if(dragonBets == 0)
+            {
+                dragonBetsTxt.text = "Click to play";   //0
+            }
+            else
+            {
+                dragonBetsTxt.text = dragonBets.ToString();
+            }
+            if(tieBetsBets == 0)
+            {
+                tieBetsTxt.text = "Click to play";   //0
+            }
+            else
+            {
+                tieBetsTxt.text = tieBetsBets.ToString();
+            }
+            if(tigerBets == 0)
+            {
+                tigerBetsTxt.text = "Click to play";   //0
+            }
+            else
+            {
+                tigerBetsTxt.text = tigerBets.ToString();
+            }
             usernameTxt.text = LocalPlayer.deviceId;
         }
 

@@ -273,7 +273,7 @@ namespace Dragon.Gameplay
             MainPlayer.Instance.totalBet += (int)UiHandler.Instance.currentChip;
             //UiHandler.Instance.BetCoinTxt.text = MainPlayer.Instance.totalBet.ToString();
            UiHandler.Instance.UpDateBets(spot, chip);
-            GameObject chipInstance = ChipSpawner.Instance.Spawn(0, chip, GetChipParent(spot));
+            GameObject chipInstance = ChipSpawner.Instance.Spawn(7, chip, GetChipParent(spot));
             StartCoroutine(MoveChip(chipInstance, chipData.target));
         }
     }

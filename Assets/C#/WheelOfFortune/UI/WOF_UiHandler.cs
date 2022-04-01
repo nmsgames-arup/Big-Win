@@ -43,9 +43,9 @@ namespace WOF.UI
         public Sprite[] placeBets_Frames;
         public Sprite[] stopBets_Frames;
         public float countdownSpeed = .25f;
-        public Text dragonBetsTxt;
-        public Text tigerBetsTxt;
-        public Text tieBetsTxt;
+        public Text BlueBetsTxt;
+        public Text YellowBetsTxt;
+        public Text RedBetsTxt;
         public GameObject[] chipimg;
         public Image loadingpnel;
         public Image loadingImag;
@@ -56,9 +56,9 @@ namespace WOF.UI
         int leftTotalBets;
         int middleTotalBets;
         int rightTotalBets;
-        int tigerBets;
-        int dragonBets;
-        int tieBetsBets;
+        int BlueBets;
+        int RedBets;
+        int YellowBets;
         public Image StartImg;
         public Sprite[] StartFrames;
         public Image CoinBurstImage;
@@ -79,10 +79,13 @@ namespace WOF.UI
             Instance = this;
         }
         private void Start()
-        {            
+        {
+            BlueBetsTxt.text = "Click to play";
+            YellowBetsTxt.text = "Click to play";
+            RedBetsTxt.text = "Click to play";
             // dragonBetsTxt.text = "0";
             // LocalPlayer.LoadGame();
-            currentChip = Chip.Chip10;
+            currentChip = Chip.Chip2;
             betUiRefrence.Add(Spot.left, leftBets);
             betUiRefrence.Add(Spot.middle, middleBets);
             betUiRefrence.Add(Spot.right, rightBets);
@@ -94,6 +97,28 @@ namespace WOF.UI
             UpdateUi();
             // StartCoroutine(Loading());
         }
+
+        public void RulesBtn()
+        {
+            RulesScript.Instance.ShowRulesUI();
+        }
+
+        // public void SFXButtons(bool isChange = false)
+        // {
+        //     if (isChange)
+        //     {
+        //         UtilitySound.Instance.ButtonClickSound();
+        //         UtilitySound.Instance.ToggleSound();
+        //     }
+        //     if (!UtilityModel.GetSound())
+        //     {
+        //         SoundImg.sprite = SoundOFF;
+        //     }
+        //     else
+        //     {
+        //         SoundImg.sprite = SoundON;
+        //     }
+        // }
 
         public IEnumerator StartImageAnimation()
         {
@@ -232,6 +257,9 @@ namespace WOF.UI
         IEnumerator StartBetting()
         {
             ResetUi();
+            BlueBetsTxt.text = "Click to play";
+            YellowBetsTxt.text = "Click to play";
+            RedBetsTxt.text = "Click to play";
             // dragonBetsTxt.text = "0";
             placeBets.gameObject.SetActive(true);
             StartCoroutine(StartplaceBets_Animation());
@@ -268,11 +296,11 @@ namespace WOF.UI
 
             switch (spot)
             {
-                case Spot.left:dragonBets += (int)currentChip;
+                case Spot.left:BlueBets += (int)currentChip;
                     break;
-                case Spot.middle:tieBetsBets += (int)currentChip;
+                case Spot.middle:RedBets += (int)currentChip;
                     break;
-                case Spot.right:tigerBets += (int)currentChip;
+                case Spot.right:YellowBets += (int)currentChip;
                     break;
                 default:
                     break;
@@ -345,13 +373,16 @@ namespace WOF.UI
         public void ResetUi()
         {
             WOF_MainPlayer.Instance.totalBet = 0;
+            BlueBetsTxt.text = "Click to play";
+            YellowBetsTxt.text = "Click to play";
+            RedBetsTxt.text = "Click to play";
             // dragonBetsTxt.text = "0";
             leftTotalBets = 0;
             middleTotalBets = 0;
             rightTotalBets = 0;
-            tigerBets = 0;
-            dragonBets = 0;
-            tieBetsBets = 0;
+            YellowBets = 0;
+            BlueBets = 0;
+            RedBets = 0;
             leftBets.text = string.Empty;
             middleBets.text = string.Empty;
             rightBets.text = string.Empty;
@@ -370,6 +401,30 @@ namespace WOF.UI
             middleBets.text = middleTotalBets.ToString();
             rightBets.text = rightTotalBets.ToString();
             balanceTxt.text = balance.ToString();
+            if(BlueBets == 0)
+            {
+                BlueBetsTxt.text = "Click to play";
+            }
+            else
+            {
+                BlueBetsTxt.text = BlueBets.ToString();
+            }
+            if(YellowBets == 0)
+            {
+                YellowBetsTxt.text = "Click to play";
+            }
+            else
+            {
+                YellowBetsTxt.text = YellowBets.ToString();
+            }
+            if(RedBets == 0)
+            {
+                RedBetsTxt.text = "Click to play";
+            }
+            else
+            {
+                RedBetsTxt.text = RedBets.ToString();
+            }
             // dragonBetsTxt.text = dragonBets.ToString();
             // tieBetsTxt.text = tieBetsBets.ToString();
             // tigerBetsTxt.text = tigerBets.ToString();

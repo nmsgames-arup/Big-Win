@@ -14,6 +14,7 @@ namespace Updown7.Gameplay
 {
     class _7updown_RoundWinningHandler : MonoBehaviour
     {
+        public static _7updown_RoundWinningHandler Instance;
         [SerializeField] GameObject leftRing;
         [SerializeField] GameObject middleRing;
         [SerializeField] GameObject rightRing;
@@ -25,6 +26,10 @@ namespace Updown7.Gameplay
         public GameObject rightDice;
         public Action<object> onWin;
         public _7updown_Timer timer;
+        private void Awake()
+        {
+            Instance = this;
+        }
         private void Start()
         {
             timer = GetComponent<_7updown_Timer>();

@@ -11,7 +11,12 @@ namespace Updown7.Gameplay
 {
     class _7updown_BotsManager : MonoBehaviour
     {
+        public static _7updown_BotsManager Instance;
         public _7updown_Bot[] bots;
+        private void Awake()
+        {
+            Instance = this;
+        }
         public void UpdateBotData(object data)
         {
             try
