@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField]private AudioSource countdownAudio;
     public static SoundManager instance;
     public bool canPlaySound;
+    public Image SoundImg;
+    public Sprite SoundOFF, SoundON;
     private void Awake()
     {
         instance = this;
@@ -63,5 +66,17 @@ public class SoundManager : MonoBehaviour
         }
         _audioSource.clip = _audioClips[clipIndex];
         _audioSource.Stop();
+    }
+
+    public void SoundOnOff()
+    {
+        if(SoundImg.sprite == SoundOFF)
+        {
+            SoundImg.sprite = SoundON;
+        }
+        else
+        {
+            SoundImg.sprite = SoundOFF;
+        }
     }
 }

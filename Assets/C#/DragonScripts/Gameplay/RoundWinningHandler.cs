@@ -60,21 +60,36 @@ namespace Dragon.Gameplay
             //rightDice.SetActive(false);       
         }
 
-        public IEnumerator StartCard_Animation()
+        public IEnumerator StartCard1_Animation()
         {
             Card1.gameObject.SetActive(true);
-            Card2.gameObject.SetActive(true);
             foreach (var item in Cards_Frames)
             {
                 Card1.sprite = item;
+                yield return new WaitForSeconds(0.04f);
+            }
+            StopCard1_Animation();
+        }
+
+        public IEnumerator StartCard2_Animation()
+        {
+            Card2.gameObject.SetActive(true);
+            foreach (var item in Cards_Frames)
+            {
                 Card2.sprite = item;
                 yield return new WaitForSeconds(0.04f);
             }
-            StopCard_Animation();
+            StopCard2_Animation();
         }
-        public void StopCard_Animation()
+
+        public void StopCard1_Animation()
         {
-            StopCoroutine(StartCard_Animation());
+            StopCoroutine(StartCard1_Animation());
+        }
+
+        public void StopCard2_Animation()
+        {
+            StopCoroutine(StartCard2_Animation());
         }
 
         public IEnumerator StartCard1_Highlight_Animation()
@@ -204,10 +219,11 @@ namespace Dragon.Gameplay
         }
         IEnumerator cardOpen(int No1,int No2, int rand0, int rand1)
         {
-            StartCoroutine(StartCard_Animation());
+            StartCoroutine(StartCard1_Animation());
+            StartCoroutine(StartCard2_Animation());
             yield return new WaitForSeconds(2.0f);
-            Card1.GetComponent<RectTransform>().sizeDelta = new Vector2(260.0f, 312.0f);
-            Card2.GetComponent<RectTransform>().sizeDelta = new Vector2(260.0f, 312.0f);
+            Card1.GetComponent<RectTransform>().sizeDelta = new Vector2(234.0f, 300.0f);
+            Card2.GetComponent<RectTransform>().sizeDelta = new Vector2(234.0f, 300.0f);
             Card1.sprite = Card[rand0].card[No1];
             StartCoroutine(StartCard1_Highlight_Animation());
             yield return new WaitForSeconds(0.5f);
@@ -252,8 +268,8 @@ namespace Dragon.Gameplay
             UtilitySound.Instance.Cardflipsound();
             Card1.sprite = TigerBackCard;
             Card2.sprite = ElephantBackCard;
-            Card1.GetComponent<RectTransform>().sizeDelta = new Vector2(415.0f, 415.0f);
-            Card2.GetComponent<RectTransform>().sizeDelta = new Vector2(415.0f, 415.0f);
+            Card1.GetComponent<RectTransform>().sizeDelta = new Vector2(500.0f, 500.0f);
+            Card2.GetComponent<RectTransform>().sizeDelta = new Vector2(500.0f, 500.0f);
 
         }
         IEnumerator DragonAnimation()

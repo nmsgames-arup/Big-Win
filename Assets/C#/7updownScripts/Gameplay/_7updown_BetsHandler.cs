@@ -10,12 +10,18 @@ namespace Updown7.Gameplay
     /// </summary>
     class _7updown_BetsHandler : MonoBehaviour
     {
+        public static _7updown_BetsHandler Instance;
         public _7updown_Timer timer;
         public GameObject mainUnite;
         public GameObject botsGameobject;
         public _7updown_OnlinePlayerBets  onlinePlayersData;
         bool isTimeUp;
         public IBot[] Bots;
+
+        void Awake()
+        {
+            Instance = this;
+        }
         private void Start()
         {
             timer.onTimeUp += () => isTimeUp = true;

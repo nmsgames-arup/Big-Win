@@ -13,14 +13,15 @@ namespace Updown7.ServerStuff
         IChipMovement chipMovement;
         ITimer timer;
         _7updown_BotsManager botManager;
+        public ServerRequest serverRequest;
         private void Start()
         {
             socket = SocketIOComponent.instance;
-            //socket = GameObject.Find("SocketIOComponents").GetComponent<SocketIOComponent>();
+            // socket = GameObject.Find("SocketIOComponents").GetComponent<SocketIOComponent>();
             chipMovement = mainUnit.GetComponent<IChipMovement>();
             timer = mainUnit.GetComponent<ITimer>();
-            botManager = mainUnit.GetComponent<_7updown_BotsManager>();
-            botsController = mainUnit.GetComponent<_7updown_BetsHandler>();
+            // botManager = mainUnit.GetComponent<_7updown_BotsManager>();
+            // botsController = mainUnit.GetComponent<_7updown_BetsHandler>();
             roundWinningHandler = mainUnit.GetComponent<_7updown_RoundWinningHandler>();
             socket.On("open", OnConnected);
             socket.On("disconnected", OnDisconnected);
@@ -35,11 +36,13 @@ namespace Updown7.ServerStuff
             socket.On(Events.OnWinNo, OnWinNo);
             socket.On(Events.OnBotsData, OnBotsData);
             socket.On(Events.OnPlayerWin, OnPlayerWin);
+            serverRequest.JoinGame();
         }
         void OnConnected(SocketIOEvent e)
         {
             print("connected");
             isConnected = true;
+            serverRequest.JoinGame();
         }
         void OnDisconnected(SocketIOEvent e)
         {
@@ -54,7 +57,8 @@ namespace Updown7.ServerStuff
         _7updown_BetsHandler botsController;
         void OnBotsData(SocketIOEvent e)
         {
-            botsController.AddBotsData(e.data);
+            // botsController.AddBotsData(e.data);
+            _7updown_BetsHandler.Instance.AddBotsData(e.data);
         }
         _7updown_RoundWinningHandler roundWinningHandler;
         void OnWinNo(SocketIOEvent e)
@@ -80,7 +84,8 @@ namespace Updown7.ServerStuff
         void OnTimerStart(SocketIOEvent e)
         {
             Debug.Log("on timer start " + e.data);
-            timer.OnTimerStart((object)e.data);
+            // timer.OnTimerStart((object)e.data);
+            _7updown_Timer.Instance.OnTimerStart((object)e.data);
         }
 
         void OnTimerUp(SocketIOEvent e)
@@ -96,9 +101,12 @@ namespace Updown7.ServerStuff
         void OnCurrentTimer(SocketIOEvent e)
         {
             Debug.Log("currunt data " + e.data);
-            botManager.UpdateBotData((object)e.data);
-            timer.OnCurrentTime((object)e.data);
-            roundWinningHandler.SetWinNumbers((object)e.data);
+            // botManager.UpdateBotData((object)e.data);
+            _7updown_BotsManager.Instance.UpdateBotData(e.data);
+            // timer.OnCurrentTime((object)e.data);
+            _7updown_Timer.Instance.OnCurrentTime(e.data);
+            // roundWinningHandler.SetWinNumbers((object)e.data);
+            _7updown_RoundWinningHandler.Instance.SetWinNumbers((object)e.data);
         }
 
         public _7updown_UiHandler uiHandler;

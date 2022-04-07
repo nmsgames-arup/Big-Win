@@ -6,12 +6,14 @@ using SocketIO;
 
 namespace Updown7.ServerStuff
 {
-    class ServerRequest : SocketHandler
+    public class ServerRequest : SocketHandler
     {
         public static ServerRequest instance;
         public void Awake()
         {
-            socket = SocketIOComponent.instance;
+            // socket = SocketIOComponent.instance;
+            socket = GameObject.Find("SocketIOComponents").GetComponent<SocketIOComponent>();
+            instance = this;
         }
         void Start()
         {

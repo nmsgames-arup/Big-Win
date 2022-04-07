@@ -57,12 +57,12 @@ namespace Updown7.Gameplay
         {
             if (isTimeUp) return;
             if (!uiHandler.IsEnoughBalancePresent()) return;
-            uiHandler.AddPlayerBets();
             Chip chip = uiHandler.currentChip;
             Spot spot = bettingSpot.GetComponent<BettingSpot>().spotType;
+            uiHandler.AddPlayerBets(spot);
             ServerRequest.instance.OnChipMove(target, chip, spot);
             uiHandler.AddBotsBets(spot, chip);
-            GameObject chipInstance = chipSpawner.Spawn(0, chip, GetChipParent(spot));
+            GameObject chipInstance = chipSpawner.Spawn(7, chip, GetChipParent(spot));
             ChipDate data = new ChipDate()
             {
                 spawnNo = 0,
@@ -155,7 +155,14 @@ namespace Updown7.Gameplay
             iTween.MoveTo(chip, iTween.Hash("position", target, "time", chipMovetime, "easetype", easeType));
             yield return new WaitForSeconds(chipMovetime);
             //scale up
-            SoundManager.instance.PlayClip("CoinAudio");
+            if( SoundManager.instance.SoundImg.sprite == SoundManager.instance.SoundOFF )
+            {
+                SoundManager.instance.StopClip("CoinAudio");
+            }
+            else
+            {
+                SoundManager.instance.PlayClip("CoinAudio");
+            }
             // UtilitySound.Instance.addchipsound();
             iTween.PunchScale(chip, iTween.Hash("x", .1, "y",0.1f, "default", .1));
             

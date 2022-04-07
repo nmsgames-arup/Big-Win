@@ -32,6 +32,8 @@ public class HomeScript : MonoBehaviour
     public Sprite[] PokerKing_Frames;
     public Image PokerKing_img;
     public Text _loadingTxt;
+    public Sprite[] BackgroundFrames;
+    public Image BackgroundImage;
     private void Awake()
     {
         Instance = this;
@@ -44,6 +46,18 @@ public class HomeScript : MonoBehaviour
         StartCoroutine(StartLuckyDice_Animation());
         StartCoroutine(StartLuckyBall_Animation());
         StartCoroutine(StartPokerKing_Animation());
+        StartCoroutine(StartBackgroundAnimation());
+    }
+
+    public IEnumerator StartBackgroundAnimation()
+    {
+        BackgroundImage.gameObject.SetActive(true);
+        foreach (var item in BackgroundFrames)
+        {
+            BackgroundImage.sprite = item;
+            yield return new WaitForSeconds(0.08f);
+        }
+        StartCoroutine(StartBackgroundAnimation());
     }
 
     public IEnumerator StartWOF_Animation()

@@ -57,6 +57,10 @@ namespace Updown7.UI
         public Sprite[] WaitStar_Frames;
         public Image WaitStar_Img;
         public GameObject[] chipimg;
+        int leftBets_value;
+        int MiddleBets_value;
+        int RightBets_value;
+        public Text LeftBetsTxt, MiddleBetsTxt, RightBetsTxt;
 
 
         private void Awake()
@@ -80,6 +84,7 @@ namespace Updown7.UI
             // SoundManager.instance.PlayBackgroundMusic();
             AddListeners();
             ResetUi();
+            balance = 10000f;
             UpdateUi();
             //StartCoroutine(Loading());
         }
@@ -173,6 +178,7 @@ namespace Updown7.UI
             yield return new WaitForSeconds(.5f);
             // placeBets.gameObject.SetActive(false);
         }
+
         int leftTotalBets;
         int middleTotalBets;
         int rightTotalBets;
@@ -198,9 +204,20 @@ namespace Updown7.UI
             }
             UpdateUi();
         }
-        public void AddPlayerBets()
+        public void AddPlayerBets(Spot spot)
         {
             balance -= (float)currentChip;
+            switch (spot)
+            {
+                case Spot.left:leftBets_value += (int)currentChip;
+                    break;
+                case Spot.middle:MiddleBets_value += (int)currentChip;
+                    break;
+                case Spot.right:RightBets_value += (int)currentChip;
+                    break;
+                default:
+                    break;
+            }
             // Debug.LogError("balance  " + balance);
             playerbetvalue += (float)currentChip;
             PlayerBet.text = playerbetvalue.ToString();
@@ -289,6 +306,9 @@ namespace Updown7.UI
             leftTotalBets = 0;
             middleTotalBets = 0;
             rightTotalBets = 0;
+            leftBets_value = 0;
+            MiddleBets_value = 0;
+            RightBets_value = 0;
             leftBets.text = string.Empty;
             middleBets.text = string.Empty;
             rightBets.text = string.Empty;
@@ -307,6 +327,30 @@ namespace Updown7.UI
             rightBets.text = rightTotalBets.ToString();
             balanceTxt.text = balance.ToString();
             usernameTxt.text ="000"+ LocalPlayer.deviceId;
+            if(leftBets_value == 0)
+            {
+                LeftBetsTxt.text = "Click to play";
+            }
+            else
+            {
+                LeftBetsTxt.text = leftBets_value.ToString();
+            }
+            if(RightBets_value == 0)
+            {
+                RightBetsTxt.text = "Click to play";
+            }
+            else
+            {
+                RightBetsTxt.text = RightBets_value.ToString();
+            }
+            if(MiddleBets_value == 0)
+            {
+                MiddleBetsTxt.text = "Click to play";
+            }
+            else
+            {
+                MiddleBetsTxt.text = MiddleBets_value.ToString();
+            }
         }
 
         public void ExitLobby()

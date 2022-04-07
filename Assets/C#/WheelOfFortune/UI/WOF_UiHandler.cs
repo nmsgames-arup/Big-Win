@@ -73,6 +73,8 @@ namespace WOF.UI
         public Image WaitTxt_Img;
         public Sprite[] WaitStar_Frames;
         public Image WaitStar_Img;
+        public Image SoundImg;
+        public Sprite SoundOFF, SoundON;
 
         private void Awake()
         {
@@ -96,6 +98,19 @@ namespace WOF.UI
             balance = 10000f;
             UpdateUi();
             // StartCoroutine(Loading());
+        }
+
+        public void SoundOnOff()
+        {
+            if(SoundImg.sprite == SoundOFF)
+            {
+                SoundImg.sprite = SoundON;
+            }
+            else
+            {
+                SoundImg.sprite = SoundOFF;
+            }
+            WOF_ChipController.Instance.CoinMove_AudioSource.mute = !WOF_ChipController.Instance.CoinMove_AudioSource.mute;
         }
 
         public void RulesBtn()

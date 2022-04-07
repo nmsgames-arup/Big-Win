@@ -9,11 +9,32 @@ public class SplashScreenScript : MonoBehaviour
 {
     public GameObject SplashScreen;
     public Image RingFillImg;
+    public Sprite[] BackgroundFrames;
+    public Image BackgroundImage;
 
     public void Start()
     {
+        // StartCoroutine(StartBackgroundAnimation());
         StartCoroutine(Wait());
     }
+
+    public IEnumerator StartBackgroundAnimation()
+    {
+        BackgroundImage.gameObject.SetActive(true);
+        foreach (var item in BackgroundFrames)
+        {
+            BackgroundImage.sprite = item;
+            yield return new WaitForSeconds(0.08f);
+        }
+        StartCoroutine(StartBackgroundAnimation());
+    }
+
+    public void StopBackgroundAnimation()
+    {
+        StopCoroutine(StartBackgroundAnimation());
+        BackgroundImage.gameObject.SetActive(false);
+    }
+    
     IEnumerator Wait()
     {
         RingFillImg.fillAmount = 0;
