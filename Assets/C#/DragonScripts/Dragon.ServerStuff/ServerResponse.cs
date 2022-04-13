@@ -101,7 +101,10 @@ namespace Dragon.ServerStuff
         void OnCurrentTimer(SocketIOEvent e)
         {
             Debug.Log("currunt data " + e.data);
-            BotsManager.Instance.UpdateBotData(e.data);
+            if(BotsManager.Instance != null)
+            {
+                BotsManager.Instance.UpdateBotData(e.data);
+            }
             RoundWinningHandler.Instance.SetWinNumbers(e.data);
             Timer.Instance.OnCurrentTime((object)e.data);
         }
