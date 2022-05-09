@@ -188,6 +188,16 @@ public class HomeScript : MonoBehaviour
         // AndroidToastMsg.ShowAndroidToastMessage("Loading");
         SceneManager.LoadScene("WheelOfFortune");
     }
+    public void LuckyBallBtn()
+    {
+        _loadingTxt.gameObject.SetActive(true);
+        SceneManager.LoadScene("LuckyBall");
+    }
+    public void PokerKingBtn()
+    {
+        _loadingTxt.gameObject.SetActive(true);
+        SceneManager.LoadScene("PokerKing");
+    }
     public void ShopBtn()
     {
         ShopScript.Instance.ShowShopUI();

@@ -66,6 +66,7 @@ namespace Dragon.UI
         int tigerBets;
         int dragonBets;
         int tieBetsBets;
+        public GameObject QuitPanel;
         private void Awake()
         {
             Instance = this;
@@ -90,6 +91,14 @@ namespace Dragon.UI
             StartCoroutine(StartTigerAnimation());
             StartCoroutine(StartElephantAnimation());
             // StartCoroutine(Loading());
+        }
+
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                QuitPanel.SetActive(true);
+            }
         }
 
         public IEnumerator StartCharacterAnimation()

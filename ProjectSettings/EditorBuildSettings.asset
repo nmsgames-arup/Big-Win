@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LuckyBall.unity
     guid: e738787fc7eb10244836bd705351337b
+  - enabled: 1
+    path: Assets/Scenes/PokerKing.unity
+    guid: 7730916f33bb56d42a3e6ad57940517b
   m_configObjects: {}

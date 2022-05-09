@@ -26,15 +26,15 @@ namespace Updown7.UI
         [SerializeField] Toggle chit1000Btn;
         [SerializeField] Toggle chit5000Btn;
 
-        [SerializeField] TMP_Text leftBets;
-        [SerializeField] TMP_Text middleBets;
-        [SerializeField] TMP_Text rightBets;
+        [SerializeField] Text leftBets;
+        [SerializeField] Text middleBets;
+        [SerializeField] Text rightBets;
         [SerializeField] TMP_Text usernameTxt;
         [SerializeField] TMP_Text balanceTxt;
 
         [SerializeField] Button lobby;
 
-        Dictionary<Spot, TMP_Text> betUiRefrence = new Dictionary<Spot, TMP_Text>();
+        Dictionary<Spot, Text> betUiRefrence = new Dictionary<Spot, Text>();
         public TMP_Text PlayerBet;
         float playerbetvalue = 0;
          public Chip currentChip;
@@ -57,11 +57,13 @@ namespace Updown7.UI
         public Sprite[] WaitStar_Frames;
         public Image WaitStar_Img;
         public GameObject[] chipimg;
+        public Sprite[] characterFrames;
+        public Image characterImg;
         int leftBets_value;
         int MiddleBets_value;
         int RightBets_value;
         public Text LeftBetsTxt, MiddleBetsTxt, RightBetsTxt;
-
+        public GameObject QuitPanel;
 
         private void Awake()
         {
@@ -86,7 +88,27 @@ namespace Updown7.UI
             ResetUi();
             balance = 10000f;
             UpdateUi();
+            StartCoroutine(StartCharacterAnimation());
             //StartCoroutine(Loading());
+        }
+
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                QuitPanel.SetActive(true);
+            }
+        }
+
+        public IEnumerator StartCharacterAnimation()
+        {
+            characterImg.gameObject.SetActive(true);
+            foreach (var item in characterFrames)
+            {
+                characterImg.sprite = item;
+                yield return new WaitForSeconds(0.08f);
+            }
+            StartCoroutine(StartCharacterAnimation());
         }
 
         public IEnumerator StartplaceBets_Animation()

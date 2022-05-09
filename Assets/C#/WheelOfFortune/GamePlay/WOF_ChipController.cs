@@ -38,7 +38,7 @@ namespace WOF.Gameplay
 
         public Dictionary<Spot, Transform> chipHolder = new Dictionary<Spot, Transform>();
         public AudioClip AddChip, CoinGenerate;
-        public AudioSource CoinMove_AudioSource, CoinGenerate_AudioSource;
+        public AudioSource CoinMove_AudioSource, GameAudio;
         bool isTimeUp;
         private void Awake()
         {

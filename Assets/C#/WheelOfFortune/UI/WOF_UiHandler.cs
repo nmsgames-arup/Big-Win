@@ -75,6 +75,7 @@ namespace WOF.UI
         public Image WaitStar_Img;
         public Image SoundImg;
         public Sprite SoundOFF, SoundON;
+        public GameObject QuitPanel;
 
         private void Awake()
         {
@@ -100,6 +101,14 @@ namespace WOF.UI
             // StartCoroutine(Loading());
         }
 
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                QuitPanel.SetActive(true);
+            }
+        }
+
         public void SoundOnOff()
         {
             if(SoundImg.sprite == SoundOFF)
@@ -111,6 +120,7 @@ namespace WOF.UI
                 SoundImg.sprite = SoundOFF;
             }
             WOF_ChipController.Instance.CoinMove_AudioSource.mute = !WOF_ChipController.Instance.CoinMove_AudioSource.mute;
+            WOF_ChipController.Instance.GameAudio.mute = !WOF_ChipController.Instance.GameAudio.mute;
         }
 
         public void RulesBtn()

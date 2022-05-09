@@ -46,6 +46,7 @@ namespace Dragon.ServerStuff
 
         void OnBotsData(SocketIOEvent e)
         {
+            // Debug.LogError("botsData  " + e.data);
             BetsHandler.Instance.AddBotsData(e.data);
         }
 
