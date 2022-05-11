@@ -1,0 +1,1635 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a83646065efec45889c3d8450a6408, type: 3}
+  m_Name: Poker King_Ai Bot_Data
+  m_EditorClassIdentifier: 
+  bots:
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 3
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 4
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 5
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 100
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 500
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 1000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 6
+    chip: 5000
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 0
+    chip: 2
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 1
+    chip: 10
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}
+  - spot: 2
+    chip: 50
+    position: {x: 0, y: 0, z: 0}

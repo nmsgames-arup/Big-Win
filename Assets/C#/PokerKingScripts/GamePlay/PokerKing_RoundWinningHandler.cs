@@ -20,13 +20,13 @@ namespace PokerKing.Gameplay
         [SerializeField] GameObject LeftRing;
         [SerializeField] GameObject middleRing;
         [SerializeField] GameObject rightRing;
+        [SerializeField] GameObject SpadeRing, ClubRing, DiamondRing, HeartRing, Spade_ClubRing, Diamond_HeartRing, JokerRing;
         public Sprite[] Imgs;
         public Image[] previousWins;
         public List<int> PreviousWinValue;
         public Action<object> onWin;
-        public Cards[] Card;
-        public Image Card1;
-        public Image Card2;
+        public Sprite[] Card;
+        public Image WinCard;
         public Sprite TigerBackCard, ElephantBackCard;
         //public string CardName[4]=new {"","","",""};
         bool isTimeUp;
@@ -80,35 +80,43 @@ namespace PokerKing.Gameplay
         }
         public void OnWin(object o)
         {
-            int wheelNo = UnityEngine.Random.Range(0, 20);
-            
-            if (wheelNo == 0)//aniamtion add khusi
+            int winNumber = UnityEngine.Random.Range(0, 53);
+
+            if(PreviousWinValue.Count >= 10)
             {
-                StartCoroutine(ShowWinningRing(LeftRing, Spots.Spade ));//dragon
+                PreviousWinValue.RemoveAt(0);
+                PreviousWinValue.Add(winNumber);
             }
-            else if (wheelNo == 1)
+            else
             {
-                StartCoroutine(ShowWinningRing(middleRing, Spots.Club ));
+                PreviousWinValue.Add(winNumber);
             }
-            else if(wheelNo == 2)
+            for(int i = 0; i < PreviousWinValue.Count; i++)
             {
-                StartCoroutine(ShowWinningRing(rightRing, Spots.Diamond ));
+                previousWins[i].enabled = true;
+                previousWins[i].sprite = Card[PreviousWinValue[i]];
             }
-            else if(wheelNo == 3)
+            WinCard.sprite = Card[winNumber];
+
+            if (winNumber >= 0 && winNumber <= 12)
             {
-                StartCoroutine(ShowWinningRing(rightRing, Spots.Heart ));
+                StartCoroutine(ShowWinningRing(SpadeRing, Spots.Spade ));
+                StartCoroutine(ShowWinningRing(Spade_ClubRing, Spots.Spade_club ));
             }
-            else if(wheelNo == 4)
+            else if (winNumber >= 13 && winNumber <= 25)
             {
-                StartCoroutine(ShowWinningRing(rightRing, Spots.Spade_club ));
+                StartCoroutine(ShowWinningRing(ClubRing, Spots.Club ));
+                StartCoroutine(ShowWinningRing(Spade_ClubRing, Spots.Spade_club ));
             }
-            else if(wheelNo == 5)
+            else if(winNumber >= 26 && winNumber <= 38)
             {
-                StartCoroutine(ShowWinningRing(rightRing, Spots.Diamond_Heart ));
+                StartCoroutine(ShowWinningRing(DiamondRing, Spots.Diamond ));
+                StartCoroutine(ShowWinningRing(Diamond_HeartRing, Spots.Diamond_Heart ));
             }
-            else if(wheelNo == 6)
+            else if(winNumber >= 39 && winNumber <= 51)
             {
-                StartCoroutine(ShowWinningRing(rightRing, Spots.Joker ));
+                StartCoroutine(ShowWinningRing(HeartRing, Spots.Heart ));
+                StartCoroutine(ShowWinningRing(Diamond_HeartRing, Spots.Diamond_Heart ));
             }
         }
 
@@ -153,12 +161,7 @@ namespace PokerKing.Gameplay
         //         StartCoroutine(ShowWinningRing(rightRing, Spot.right, o));
         //     }
         // }
-        IEnumerator cardOpen(int No1,int No2, int rand0, int rand1)
-        {
-            Card1.sprite = Card[rand0].card[No1];
-            yield return new WaitForSeconds(0.5f);
-            Card2.sprite = Card[rand1].card[No2];
-        }
+        
         IEnumerator ShowWinningRing( GameObject ring , Spots winnerSpot )
         {
             yield return new WaitForSeconds(1f);

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Shared;
-using WOF.UI;
-using WOF.Utility;
+using PokerKing.UI;
+using PokerKing.Utility;
 
 namespace PokerKing.Gameplay
 {
@@ -40,7 +40,7 @@ namespace PokerKing.Gameplay
             //chip.GetComponent<SpriteRenderer>().sortingOrder = chipOrderInLayer++;
             chip.SetActive(true);
             chip.transform.position = spawnPostions[positinIndex].position;
-            StartCoroutine(WOF_UiHandler.Instance.StartServer_Animation());
+            // StartCoroutine(WOF_UiHandler.Instance.StartServer_Animation());
             return chip;
         }
     }

@@ -36,9 +36,6 @@ namespace PokerKing.UI
         public Image placeBets;
         public Sprite[] placeBets_Frames;
         public Sprite[] stopBets_Frames;
-        public Text BlueBetsTxt;
-        public Text YellowBetsTxt;
-        public Text RedBetsTxt;
         public GameObject[] chipimg;
         public Image loadingpnel;
         bool isLoading = true;
@@ -67,9 +64,6 @@ namespace PokerKing.UI
         }
         private void Start()
         {
-            BlueBetsTxt.text = "Click to play";
-            YellowBetsTxt.text = "Click to play";
-            RedBetsTxt.text = "Click to play";
             // dragonBetsTxt.text = "0";
             // LocalPlayer.LoadGame();
             currentChip = Chip.Chip2;
@@ -269,9 +263,6 @@ namespace PokerKing.UI
         IEnumerator StartBetting()
         {
             ResetUi();
-            BlueBetsTxt.text = "Click to play";
-            YellowBetsTxt.text = "Click to play";
-            RedBetsTxt.text = "Click to play";
             // dragonBetsTxt.text = "0";
             placeBets.gameObject.SetActive(true);
             StartCoroutine(StartplaceBets_Animation());
@@ -409,9 +400,6 @@ namespace PokerKing.UI
         public void ResetUi()
         {
             PokerKing_MainPlayer.Instance.totalBet = 0;
-            BlueBetsTxt.text = "Click to play";
-            YellowBetsTxt.text = "Click to play";
-            RedBetsTxt.text = "Click to play";
             // dragonBetsTxt.text = "0";
             SpadeTotalBets = 0;
             ClubTotalBets = 0;

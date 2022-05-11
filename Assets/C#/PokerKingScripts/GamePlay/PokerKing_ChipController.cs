@@ -28,6 +28,7 @@ namespace PokerKing.Gameplay
         /// </summary>
         public Transform SpadeParent, ClubParent, DiamondParent, HeartParent, Spade_ClubParent, Diamond_HeartParent, JokerParent;
         public GameObject LeftChipPos, RightChipPos, MiddleChipPos;
+        public GameObject SpadeChipPos, ClubChipPos, DiamondChipPos, HeartChipPos, Spade_ClubChipPos, Diamond_HeartChipPos, JokerChipPos;
 
         [SerializeField] float chipMoveTime;
         public Action<Transform, Vector3> OnUserInput;
@@ -74,43 +75,43 @@ namespace PokerKing.Gameplay
             switch(spot)
             {
                 case Spots.Spade:
-                    target.x = UnityEngine.Random.Range(LeftChipPos.transform.position.x - 0.3f , LeftChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(LeftChipPos.GetComponent<RectTransform>().position.y - 0.4f, LeftChipPos.GetComponent<RectTransform>().position.y + 0.4f );
+                    target.x = UnityEngine.Random.Range(SpadeChipPos.transform.position.x - 0.3f , SpadeChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(SpadeChipPos.GetComponent<RectTransform>().position.y - 0.4f, SpadeChipPos.GetComponent<RectTransform>().position.y + 0.4f );
                     // target.y = LeftChipPos.transform.position.y;
-                    target.z = LeftChipPos.transform.position.z;
+                    target.z = SpadeChipPos.transform.position.z;
                     // target = LeftChipPos.transform.position;
                     break;
                 case Spots.Club:
-                    target.x = UnityEngine.Random.Range(MiddleChipPos.transform.position.x - 0.3f , MiddleChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(MiddleChipPos.GetComponent<RectTransform>().position.y - 0.4f, MiddleChipPos.GetComponent<RectTransform>().position.y + 0.4f );
+                    target.x = UnityEngine.Random.Range(ClubChipPos.transform.position.x - 0.3f , ClubChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(ClubChipPos.GetComponent<RectTransform>().position.y - 0.4f, ClubChipPos.GetComponent<RectTransform>().position.y + 0.4f );
                     // target.y = MiddleChipPos.transform.position.y;
-                    target.z = MiddleChipPos.transform.position.z;
+                    target.z = ClubChipPos.transform.position.z;
                     // target = MiddleChipPos.transform.position;
                     break;
                 case Spots.Diamond:
-                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.3f , RightChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.4f, RightChipPos.GetComponent<RectTransform>().position.y + 0.4f );
-                    target.z = RightChipPos.transform.position.z;
+                    target.x = UnityEngine.Random.Range(DiamondChipPos.transform.position.x - 0.3f , DiamondChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(DiamondChipPos.GetComponent<RectTransform>().position.y - 0.4f, DiamondChipPos.GetComponent<RectTransform>().position.y + 0.4f );
+                    target.z = DiamondChipPos.transform.position.z;
                     break;
                 case Spots.Heart:
-                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.3f , RightChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.4f, RightChipPos.GetComponent<RectTransform>().position.y + 0.4f );
-                    target.z = RightChipPos.transform.position.z;
+                    target.x = UnityEngine.Random.Range(HeartChipPos.transform.position.x - 0.3f , HeartChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(HeartChipPos.GetComponent<RectTransform>().position.y - 0.4f, HeartChipPos.GetComponent<RectTransform>().position.y + 0.4f );
+                    target.z = HeartChipPos.transform.position.z;
                     break;
                 case Spots.Spade_club:
-                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.3f , RightChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.4f, RightChipPos.GetComponent<RectTransform>().position.y + 0.4f );
-                    target.z = RightChipPos.transform.position.z;
+                    target.x = UnityEngine.Random.Range(Spade_ClubChipPos.transform.position.x - 0.3f , Spade_ClubChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(Spade_ClubChipPos.GetComponent<RectTransform>().position.y - 0.4f, Spade_ClubChipPos.GetComponent<RectTransform>().position.y + 0.4f );
+                    target.z = Spade_ClubChipPos.transform.position.z;
                     break;
                 case Spots.Diamond_Heart:
-                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.3f , RightChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.4f, RightChipPos.GetComponent<RectTransform>().position.y + 0.4f );
-                    target.z = RightChipPos.transform.position.z;
+                    target.x = UnityEngine.Random.Range(Diamond_HeartChipPos.transform.position.x - 0.3f , Diamond_HeartChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(Diamond_HeartChipPos.GetComponent<RectTransform>().position.y - 0.4f, Diamond_HeartChipPos.GetComponent<RectTransform>().position.y + 0.4f );
+                    target.z = Diamond_HeartChipPos.transform.position.z;
                     break;
                 case Spots.Joker:
-                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.3f , RightChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.4f, RightChipPos.GetComponent<RectTransform>().position.y + 0.4f );
-                    target.z = RightChipPos.transform.position.z;
+                    target.x = UnityEngine.Random.Range(JokerChipPos.transform.position.x - 0.3f , JokerChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(JokerChipPos.GetComponent<RectTransform>().position.y - 0.4f, JokerChipPos.GetComponent<RectTransform>().position.y + 0.4f );
+                    target.z = JokerChipPos.transform.position.z;
                     break;
                 default:
                     break;
@@ -157,43 +158,43 @@ namespace PokerKing.Gameplay
             switch (spot)
             {
                 case Spots.Spade:
-                    target.x = UnityEngine.Random.Range(LeftChipPos.transform.position.x - 0.3f , LeftChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(LeftChipPos.GetComponent<RectTransform>().position.y - 0.4f, LeftChipPos.GetComponent<RectTransform>().position.y + 0.4f );
+                    target.x = UnityEngine.Random.Range(SpadeChipPos.transform.position.x - 0.3f , SpadeChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(SpadeChipPos.GetComponent<RectTransform>().position.y - 0.4f, SpadeChipPos.GetComponent<RectTransform>().position.y + 0.4f );
                     // target.y = LeftChipPos.transform.position.y;
-                    target.z = LeftChipPos.transform.position.z;
+                    target.z = SpadeChipPos.transform.position.z;
                     // target = LeftChipPos.transform.position;
                     break;
                 case Spots.Club:
-                    target.x = UnityEngine.Random.Range(MiddleChipPos.transform.position.x - 0.3f , MiddleChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(MiddleChipPos.GetComponent<RectTransform>().position.y - 0.4f, MiddleChipPos.GetComponent<RectTransform>().position.y + 0.4f );
+                    target.x = UnityEngine.Random.Range(ClubChipPos.transform.position.x - 0.3f , ClubChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(ClubChipPos.GetComponent<RectTransform>().position.y - 0.4f, ClubChipPos.GetComponent<RectTransform>().position.y + 0.4f );
                     // target.y = MiddleChipPos.transform.position.y;
-                    target.z = MiddleChipPos.transform.position.z;
+                    target.z = ClubChipPos.transform.position.z;
                     // target = MiddleChipPos.transform.position;
                     break;
                 case Spots.Diamond:
-                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.3f , RightChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.4f, RightChipPos.GetComponent<RectTransform>().position.y + 0.4f );
-                    target.z = RightChipPos.transform.position.z;
+                    target.x = UnityEngine.Random.Range(DiamondChipPos.transform.position.x - 0.3f , DiamondChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(DiamondChipPos.GetComponent<RectTransform>().position.y - 0.4f, DiamondChipPos.GetComponent<RectTransform>().position.y + 0.4f );
+                    target.z = DiamondChipPos.transform.position.z;
                     break;
                 case Spots.Heart:
-                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.3f , RightChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.4f, RightChipPos.GetComponent<RectTransform>().position.y + 0.4f );
-                    target.z = RightChipPos.transform.position.z;
+                    target.x = UnityEngine.Random.Range(HeartChipPos.transform.position.x - 0.3f , HeartChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(HeartChipPos.GetComponent<RectTransform>().position.y - 0.4f, HeartChipPos.GetComponent<RectTransform>().position.y + 0.4f );
+                    target.z = HeartChipPos.transform.position.z;
                     break;
                 case Spots.Spade_club:
-                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.3f , RightChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.4f, RightChipPos.GetComponent<RectTransform>().position.y + 0.4f );
-                    target.z = RightChipPos.transform.position.z;
+                    target.x = UnityEngine.Random.Range(Spade_ClubChipPos.transform.position.x - 0.3f , Spade_ClubChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(Spade_ClubChipPos.GetComponent<RectTransform>().position.y - 0.2f, Spade_ClubChipPos.GetComponent<RectTransform>().position.y + 0.2f );
+                    target.z = Spade_ClubChipPos.transform.position.z;
                     break;
                 case Spots.Diamond_Heart:
-                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.3f , RightChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.4f, RightChipPos.GetComponent<RectTransform>().position.y + 0.4f );
-                    target.z = RightChipPos.transform.position.z;
+                    target.x = UnityEngine.Random.Range(Diamond_HeartChipPos.transform.position.x - 0.3f , Diamond_HeartChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(Diamond_HeartChipPos.GetComponent<RectTransform>().position.y - 0.2f, Diamond_HeartChipPos.GetComponent<RectTransform>().position.y + 0.2f );
+                    target.z = Diamond_HeartChipPos.transform.position.z;
                     break;
                 case Spots.Joker:
-                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.3f , RightChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.4f, RightChipPos.GetComponent<RectTransform>().position.y + 0.4f );
-                    target.z = RightChipPos.transform.position.z;
+                    target.x = UnityEngine.Random.Range(JokerChipPos.transform.position.x - 0.8f , JokerChipPos.transform.position.x + 0.8f);
+                    target.y = UnityEngine.Random.Range(JokerChipPos.GetComponent<RectTransform>().position.y - 0.15f, JokerChipPos.GetComponent<RectTransform>().position.y + 0.15f );
+                    target.z = JokerChipPos.transform.position.z;
                     break;
                 default:
                     break;
@@ -233,25 +234,38 @@ namespace PokerKing.Gameplay
 
         public void TakeChipsBack(Spots winner)
         {
-            StartCoroutine(DestroyChips(winner));
+            StartCoroutine(Destroy_WinnerChips(winner));
         }
-        IEnumerator DestroyChips(Spots winnerSpot)
+        IEnumerator Destroy_WinnerChips(Spots winnerSpot)
         {
+            // foreach (var item in chipHolder)
+            // {
+            //     if (item.Key == winnerSpot) continue;
+            //     foreach (Transform child in item.Value)
+            //     {
+            //         StartCoroutine(MoveChips(child, chipSecondLastSpot));
+            //     }
+            // }
+            yield return new WaitForSeconds(0.5f);
+            foreach (Transform child in chipHolder[winnerSpot])
+            {
+                StartCoroutine(MoveChips(child, chipLastSpot));
+            }
+            StartCoroutine(Destroy_LostChips());
+            PokerKing_UiHandler.Instance.ResetUi();
+
+        }
+
+        IEnumerator Destroy_LostChips()
+        {
+            yield return new WaitForSeconds(1.5f);
             foreach (var item in chipHolder)
             {
-                if (item.Key == winnerSpot) continue;
                 foreach (Transform child in item.Value)
                 {
                     StartCoroutine(MoveChips(child, chipSecondLastSpot));
                 }
             }
-            yield return new WaitForSeconds(1);
-            foreach (Transform child in chipHolder[winnerSpot])
-            {
-                StartCoroutine(MoveChips(child, chipLastSpot));
-            }
-            PokerKing_UiHandler.Instance.ResetUi();
-
         }
         public float speed = 1f;
         public float waitTime = 0.85f;
@@ -274,53 +288,53 @@ namespace PokerKing.Gameplay
             switch (spots)
             {
                 case Spots.Spade:
-                    target.x = UnityEngine.Random.Range(LeftChipPos.transform.position.x - 0.3f , LeftChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(LeftChipPos.GetComponent<RectTransform>().position.y - 0.4f, LeftChipPos.GetComponent<RectTransform>().position.y + 0.4f );
+                    target.x = UnityEngine.Random.Range(SpadeChipPos.transform.position.x - 0.3f , SpadeChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(SpadeChipPos.GetComponent<RectTransform>().position.y - 0.4f, SpadeChipPos.GetComponent<RectTransform>().position.y + 0.4f );
                     // target.y = LeftChipPos.transform.position.y;
-                    target.z = LeftChipPos.transform.position.z;
+                    target.z = SpadeChipPos.transform.position.z;
                     // target = LeftChipPos.transform.position;
                     // target = new Vector3(UnityEngine.Random.Range(LeftChipPos.GetComponent<RectTransform>().rect.xMin, LeftChipPos.GetComponent<RectTransform>().rect.xMax), UnityEngine.Random.Range(LeftChipPos.GetComponent<RectTransform>().rect.yMin, LeftChipPos.GetComponent<RectTransform>().rect.yMax), 0 );
                     break;
                 case Spots.Club:
-                    target.x = UnityEngine.Random.Range(MiddleChipPos.transform.position.x - 0.3f , MiddleChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(MiddleChipPos.GetComponent<RectTransform>().position.y - 0.4f, MiddleChipPos.GetComponent<RectTransform>().position.y + 0.4f );
+                    target.x = UnityEngine.Random.Range(ClubChipPos.transform.position.x - 0.3f , ClubChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(ClubChipPos.GetComponent<RectTransform>().position.y - 0.4f, ClubChipPos.GetComponent<RectTransform>().position.y + 0.4f );
                     // target.y = MiddleChipPos.transform.position.y;
-                    target.z = MiddleChipPos.transform.position.z;
+                    target.z = ClubChipPos.transform.position.z;
                     // target = MiddleChipPos.transform.position;
                     break;
                 case Spots.Diamond:
-                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.3f , RightChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.4f, RightChipPos.GetComponent<RectTransform>().position.y + 0.4f );
+                    target.x = UnityEngine.Random.Range(DiamondChipPos.transform.position.x - 0.3f , DiamondChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(DiamondChipPos.GetComponent<RectTransform>().position.y - 0.4f, DiamondChipPos.GetComponent<RectTransform>().position.y + 0.4f );
                     // target.y = RightChipPos.transform.position.y;
-                    target.z = RightChipPos.transform.position.z;
+                    target.z = DiamondChipPos.transform.position.z;
                     // target = RightChipPos.transform.position;
                     break;
                 case Spots.Heart:
-                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.3f , RightChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.4f, RightChipPos.GetComponent<RectTransform>().position.y + 0.4f );
+                    target.x = UnityEngine.Random.Range(HeartChipPos.transform.position.x - 0.3f , HeartChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(HeartChipPos.GetComponent<RectTransform>().position.y - 0.4f, HeartChipPos.GetComponent<RectTransform>().position.y + 0.4f );
                     // target.y = RightChipPos.transform.position.y;
-                    target.z = RightChipPos.transform.position.z;
+                    target.z = HeartChipPos.transform.position.z;
                     // target = RightChipPos.transform.position;
                     break;
                 case Spots.Spade_club:
-                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.3f , RightChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.4f, RightChipPos.GetComponent<RectTransform>().position.y + 0.4f );
+                    target.x = UnityEngine.Random.Range(Spade_ClubChipPos.transform.position.x - 0.3f , Spade_ClubChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(Spade_ClubChipPos.GetComponent<RectTransform>().position.y - 0.2f, Spade_ClubChipPos.GetComponent<RectTransform>().position.y + 0.2f );
                     // target.y = RightChipPos.transform.position.y;
-                    target.z = RightChipPos.transform.position.z;
+                    target.z = Spade_ClubChipPos.transform.position.z;
                     // target = RightChipPos.transform.position;
                     break;
                 case Spots.Diamond_Heart:
-                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.3f , RightChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.4f, RightChipPos.GetComponent<RectTransform>().position.y + 0.4f );
+                    target.x = UnityEngine.Random.Range(Diamond_HeartChipPos.transform.position.x - 0.3f , Diamond_HeartChipPos.transform.position.x + 0.3f);
+                    target.y = UnityEngine.Random.Range(Diamond_HeartChipPos.GetComponent<RectTransform>().position.y - 0.2f, Diamond_HeartChipPos.GetComponent<RectTransform>().position.y + 0.2f );
                     // target.y = RightChipPos.transform.position.y;
-                    target.z = RightChipPos.transform.position.z;
+                    target.z = Diamond_HeartChipPos.transform.position.z;
                     // target = RightChipPos.transform.position;
                     break;
                 case Spots.Joker:
-                    target.x = UnityEngine.Random.Range(RightChipPos.transform.position.x - 0.3f , RightChipPos.transform.position.x + 0.3f);
-                    target.y = UnityEngine.Random.Range(RightChipPos.GetComponent<RectTransform>().position.y - 0.4f, RightChipPos.GetComponent<RectTransform>().position.y + 0.4f );
+                    target.x = UnityEngine.Random.Range(JokerChipPos.transform.position.x - 0.8f , JokerChipPos.transform.position.x + 0.8f);
+                    target.y = UnityEngine.Random.Range(JokerChipPos.GetComponent<RectTransform>().position.y - 0.15f, JokerChipPos.GetComponent<RectTransform>().position.y + 0.15f );
                     // target.y = RightChipPos.transform.position.y;
-                    target.z = RightChipPos.transform.position.z;
+                    target.z = JokerChipPos.transform.position.z;
                     // target = RightChipPos.transform.position;
                     break;
                 default:
@@ -337,7 +351,7 @@ namespace PokerKing.Gameplay
             Chip chip = chipData.chip;
             Spot spot = chipData.spot;
             // PokerKing_UiHandler.Instance.AddBets(spot);
-            float XPos =  UnityEngine.Random.Range(LeftChipPos.transform.position.x - 100.0f , LeftChipPos.transform.position.x + 100.0f);
+            // float XPos =  UnityEngine.Random.Range(LeftChipPos.transform.position.x - 100.0f , LeftChipPos.transform.position.x + 100.0f);
             switch (spot)
             {
                 case Spot.left:
