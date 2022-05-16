@@ -40,6 +40,12 @@ namespace PokerKing.Gameplay
         public Image TigerWinner1;
         public Image DragonWinner1;
         int randNo;
+        public Cards[] CardsFrame;
+        public Image CardsImage;
+        [SerializeField]
+        private Sprite faceSprite, backSprite;
+        private bool coroutineAllowed, facedUp;
+        int winNumber;
 
         private void Awake()
         {
@@ -80,7 +86,34 @@ namespace PokerKing.Gameplay
         }
         public void OnWin(object o)
         {
-            int winNumber = UnityEngine.Random.Range(0, 53);
+            StartCoroutine(StartCardsAnimation());
+        }
+
+        IEnumerator StartCardsAnimation()
+        {
+            CardsImage.gameObject.SetActive(true);
+            int random = UnityEngine.Random.Range(0,5);
+            foreach (var item in CardsFrame[random].card)
+            {
+                CardsImage.sprite = item;
+                yield return new WaitForSeconds(0.03f);
+            }
+            StopCardsAnimation();
+        }
+
+        void StopCardsAnimation()
+        {
+            StopCoroutine(StartCardsAnimation());
+            CardsImage.sprite = CardsFrame[0].card[0];
+            winFunction();
+            coroutineAllowed = true;
+            facedUp = false;
+            StartCoroutine(RotateCard());
+        }
+
+        public void winFunction()
+        {
+            winNumber = UnityEngine.Random.Range(0, 53);
 
             if(PreviousWinValue.Count >= 10)
             {
@@ -96,7 +129,7 @@ namespace PokerKing.Gameplay
                 previousWins[i].enabled = true;
                 previousWins[i].sprite = Card[PreviousWinValue[i]];
             }
-            WinCard.sprite = Card[winNumber];
+            // WinCard.sprite = Card[winNumber];
 
             if (winNumber >= 0 && winNumber <= 12)
             {
@@ -118,6 +151,46 @@ namespace PokerKing.Gameplay
                 StartCoroutine(ShowWinningRing(HeartRing, Spots.Heart ));
                 StartCoroutine(ShowWinningRing(Diamond_HeartRing, Spots.Diamond_Heart ));
             }
+        }
+
+        private IEnumerator RotateCard()
+        {
+            coroutineAllowed = false;
+
+            if (!facedUp)
+            {
+                WinCard.enabled = true;
+                // WinCard.rectTransform.sizeDelta = new Vector2(165.0f, 220.0f);
+                // for (float i = 0f; i <= 180f; i += 10f)
+                // {
+                //     transform.rotation = Quaternion.Euler(0f, i, 0f);
+                //     if (i == 90f)
+                //     {
+                        // CardsImage.sprite = faceSprite;
+                        WinCard.GetComponent<Animation>().Play("WinnerCardOpen");
+                        WinCard.sprite = Card[winNumber];
+                    // }
+                    yield return new WaitForSeconds(0.01f);
+                // }
+            }
+
+            else if (facedUp)
+            {
+                // WinCard.rectTransform.sizeDelta = new Vector2(600.0f, 500.0f);
+                // for (float i = 180f; i >= 0f; i -= 10f)
+                // {
+                //     transform.rotation = Quaternion.Euler(0f, i, 0f);
+                //     if (i == 90f)
+                //     {
+                        WinCard.GetComponent<Animation>().Play("WinnerCardClose");
+                        WinCard.sprite = backSprite;
+                    // }
+                    yield return new WaitForSeconds(0.01f);
+                    // WinCard.enabled = false;
+                // }
+            }
+
+            coroutineAllowed = true;
         }
 
         /* Need to call below function of OnWin once api is integrated */
@@ -178,6 +251,8 @@ namespace PokerKing.Gameplay
             PokerKing_ChipController.Instance.TakeChipsBack(winnerSpot);
             yield return new WaitForSeconds(2f);
             ring.SetActive(false);
+            facedUp = true;
+            StartCoroutine(RotateCard());
         }
 
         /* Need to call below function of OnWin once api is integrated */

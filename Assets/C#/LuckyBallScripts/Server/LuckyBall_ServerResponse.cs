@@ -52,7 +52,7 @@ namespace LuckyBall.ServerStuff
         void OnWinNo(SocketIOEvent e)
         {
             // WOF_RoundWinningHandler.Instance.OnWin(e.data);         //call this function when api is integrated
-            // Debug.LogError("data  " + e.data);
+            Debug.LogError("data  " + e.data);
             LuckyBall_RoundWinningHandler.Instance.OnWin(e.data);
         }
 

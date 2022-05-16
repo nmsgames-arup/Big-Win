@@ -82,9 +82,10 @@ namespace LuckyBall.Gameplay
         }
         public void OnWin(object o)
         {
-            Debug.Log("obj  " + o);
+            Debug.LogError("obj  " + o);
             DiceWinNos winData = Utility.Utility.GetObjectOfType<DiceWinNos>(o);
             wheelNo = winData.winningSpot;
+            Debug.LogError("wheelNo  " + wheelNo);
             wheelNo = UnityEngine.Random.Range(0, 10);
 
             StartCoroutine(StartShuffling_Animation());
