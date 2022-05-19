@@ -14,6 +14,7 @@ public class LoginScript : MonoBehaviour
     public static LoginScript Instance;
     public GameObject LoginPanel;
     public GameObject LoginPanel1;
+    public InputField EmailId;
     public InputField Password;
     public InputField Mobile;
     public GameObject SignUpPanel;
@@ -99,7 +100,16 @@ public class LoginScript : MonoBehaviour
         {
 
         }
-    }    
+    }
+
+    public void LoginBtn_New()
+    {
+        if( !String.IsNullOrEmpty(EmailId.text) || !String.IsNullOrEmpty(Password.text) )
+        {
+            StartCoroutine(WebRequestHandler.instance.LoginAPI(LoginURL, EmailId.text, Password.text ));
+        }
+    }
+
     public void ForgetPasswordBtn()
     {
         ForgetPasswordScript.Instance.ShowForgetPasswordUI();

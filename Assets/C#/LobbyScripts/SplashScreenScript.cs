@@ -15,7 +15,8 @@ public class SplashScreenScript : MonoBehaviour
     public void Start()
     {
         // StartCoroutine(StartBackgroundAnimation());
-        StartCoroutine(Wait());
+        // StartCoroutine(Wait());
+        StartCoroutine(Check_Logindata());
     }
 
     public IEnumerator StartBackgroundAnimation()
@@ -33,6 +34,31 @@ public class SplashScreenScript : MonoBehaviour
     {
         StopCoroutine(StartBackgroundAnimation());
         BackgroundImage.gameObject.SetActive(false);
+    }
+
+    IEnumerator Check_Logindata()
+    {
+        RingFillImg.fillAmount = 0;
+        SplashScreen.SetActive(true);
+        while (RingFillImg.fillAmount < 1)
+        {
+            RingFillImg.fillAmount += 0.05f;
+            yield return new WaitForSeconds(0.05f);
+        }
+        yield return new WaitForSeconds(0.5f);
+        SplashScreen.SetActive(false);
+        if (PlayerPrefs.GetString("email", "") != "")
+        {
+            string str = PlayerPrefs.GetString("email", "");
+            LoginScript.Instance.Mobile.text = PlayerPrefs.GetString("email", "");
+            LoginScript.Instance.Password.text = PlayerPrefs.GetString("password", "");
+            LoginScript.Instance.LoginBtn_New();
+            
+        }
+        else
+        {
+            LoginScript.Instance.LoginPanel.SetActive(true);
+        }
     }
     
     IEnumerator Wait()

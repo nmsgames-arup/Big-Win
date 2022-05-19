@@ -86,6 +86,8 @@ namespace PokerKing.Gameplay
         }
         public void OnWin(object o)
         {
+            DiceWinNos winData = Utility.Utility.GetObjectOfType<DiceWinNos>(o);
+            winNumber = winData.winningSpot;
             StartCoroutine(StartCardsAnimation());
         }
 
@@ -113,7 +115,7 @@ namespace PokerKing.Gameplay
 
         public void winFunction()
         {
-            winNumber = UnityEngine.Random.Range(0, 53);
+            // winNumber = UnityEngine.Random.Range(0, 53);
 
             if(PreviousWinValue.Count >= 10)
             {

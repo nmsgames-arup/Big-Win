@@ -23,7 +23,7 @@ namespace WOF.ServerStuff
                 balance = LocalPlayer.balance,
                 playerId = UserDetail.UserId.ToString(),
                 profilePic = LocalPlayer.profilePic,
-                gameId = "2"
+                gameId = "9"
             };
             socket.Emit(Events.RegisterPlayer, new JSONObject(JsonUtility.ToJson(player)));
         }

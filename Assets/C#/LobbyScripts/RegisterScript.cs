@@ -9,14 +9,18 @@ public class RegisterScript : MonoBehaviour
 {
     public static RegisterScript Instance;
     public GameObject RegisterPanel;
+    public InputField EmailId;
     public InputField MobileNo;
     public InputField Password;
+    public InputField UserName;
     public InputField ReEnterPassword;
     public InputField OTP;
+    public Button OTPBtn;
     //public Button SubmitButton;
     public Text ShowMessageText;
-    string RegisterURL = "https://jeetogame.in/jeeto_game_new/WebServices/SignUp";//"https://jeetogame.in/jeeto_game/WebServices/SignUp";
-    public static string OTPURL = "https://jeetogame.in/jeeto_game/WebServices/sendVerifyOtp";
+    // string RegisterURL = "https://jeetogame.in/jeeto_game_new/WebServices/SignUp";//"https://jeetogame.in/jeeto_game/WebServices/SignUp";
+    string RegisterURL = "http://52.7.28.180:5000/auth/verifyemail";
+    string OTPURL = "http://52.7.28.180:5000/auth/signUp";
     private void Awake()
     {
         Instance = this;
@@ -24,6 +28,11 @@ public class RegisterScript : MonoBehaviour
         ShowMessageText.gameObject.SetActive(false);
        // MobileNo.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
        // MobileNo.onEndEdit.AddListener(delegate { ValueLengthCheck(); });
+    }
+
+    void OnEnable()
+    {
+        OTPBtn.interactable = true;
     }
 
     // Invoked when the value of the text field changes.
@@ -61,34 +70,17 @@ public class RegisterScript : MonoBehaviour
     public void RegisterBtn()
     {
         SessionXMLScript _sessionScript = FindObjectOfType<SessionXMLScript>();
-        _sessionScript.CreateXMLFile_data();
-        RegisterPanel.SetActive(false);
-        //if (MobileNo.text != "" && OTP.text != "")
-        if (MobileNo.text != "" && Password.text != "" && ReEnterPassword.text != "")
+        // _sessionScript.CreateXMLFile_data();
+        // RegisterPanel.SetActive(false);
+        if (!String.IsNullOrEmpty(EmailId.text) || !String.IsNullOrEmpty(OTP.text))
         {
-            if (Password.text == ReEnterPassword.text)
-            {
                 string device_id = SystemInfo.deviceUniqueIdentifier;
                 ShowMessageText.gameObject.SetActive(false);
-                RegisterForm form = new RegisterForm(MobileNo.text, Password.text, ReEnterPassword.text,UserDetail.UserId, "en");
-                WebRequestHandler.instance.Post(RegisterURL, JsonUtility.ToJson(form), OnRegisterRequestProcessed);
-            }
-        }
-        else
-        {
-            if (MobileNo.text == "")
-            {
-                ShowMessage("Enter Mobile No");
-            }
-            if (Password.text == "")
-            {
-                ShowMessage("Enter Password");
-            }
-            if (ReEnterPassword.text == "")
-            {
-                ShowMessage("Enter Confirm Password");
-            }
-
+                // RegisterForm form = new RegisterForm(MobileNo.text, Password.text, ReEnterPassword.text,UserDetail.UserId, "en");
+                RegisterForm form = new RegisterForm("monica22patel@gmail.com", Password.text, Password.text, "monica", MobileNo.text, "en");
+                StartCoroutine(WebRequestHandler.instance.RegisterAPI(RegisterURL, EmailId.text, OTP.text));
+                // WebRequestHandler.instance.Post(RegisterURL, JsonUtility.ToJson(form), OnRegisterRequestProcessed);
+            // }
         }
     }
 
@@ -100,24 +92,49 @@ public class RegisterScript : MonoBehaviour
     private void OnRegisterRequestProcessed(string json, bool success)
     {
         RegisterFormRoot responce = JsonUtility.FromJson<RegisterFormRoot>(json);
-        Debug.Log("res : " + responce.response.data.id);
         if (responce.response.status)
         {
             RegisterPanel.SetActive(false);
-            ProfileScript.Instance.ShowProfileUI();
+            // ProfileScript.Instance.ShowProfileUI();
         }
     
     }
    public void OTPVerifyBtn()
     {
-        if (MobileNo.text != "")
+        if (String.IsNullOrEmpty(EmailId.text))
         {
+            ShowMessage("Enter Email ID");
+        }
+        else if(String.IsNullOrEmpty(Password.text))
+        {
+            ShowMessage("Enter Password");
+        }
+        else if(String.IsNullOrEmpty(UserName.text) )
+        {
+            ShowMessage("Enter UserName");
+        }
+        else if(String.IsNullOrEmpty(MobileNo.text))
+        {
+            ShowMessage("Enter Mobile No");
+        }
+        else
+        {
+
+            Debug.Log("data entered  ");
             string device_id = SystemInfo.deviceUniqueIdentifier;
             // RegisterForm form = new RegisterForm(MobileNo.text, device_id,Password.text, ReEnterPassword.text,"en");
             RegisterForm form = new RegisterForm(MobileNo.text, Password.text, ReEnterPassword.text,UserDetail.UserId, "en");
-            WebRequestHandler.instance.Post(OTPURL, JsonUtility.ToJson(form), OnOtpVerifyRequestProcessed);
+            // WebRequestHandler.instance.Post(OTPURL, JsonUtility.ToJson(form), OnOtpVerifyRequestProcessed);
+            StartCoroutine(WebRequestHandler.instance.GetOTP(OTPURL, EmailId.text, Password.text, UserName.text, MobileNo.text));
         }
     }
+
+    public void GetOTPBtn()
+    {
+        WebRequestHandler.instance.GetOTP(OTPURL, EmailId.text, Password.text, UserName.text, MobileNo.text);
+    }
+
+
     private void OnOtpVerifyRequestProcessed(string json, bool success)
     {
         LoginFormRoot responce = JsonUtility.FromJson<LoginFormRoot>(json);
@@ -129,9 +146,11 @@ public class RegisterScript : MonoBehaviour
 [Serializable]
 public class RegisterForm
 {
+    public string emailId;
     public string mobile_number;
     public string password;
     public string c_password;
+    public string userName;
     public string language;
    // public string otp;
     public int user_id;
@@ -146,6 +165,15 @@ public RegisterForm(string mobile_number, string password,string c_password,  in
        // this.otp = otp;
         this.user_id = user_id;
     } 
+    public RegisterForm(string emailId, string password,string c_password, string userName, string mobile_number, string language)
+    {
+        this.emailId = emailId;
+        this.password = password;
+        this.c_password = c_password;
+        this.userName = userName;
+        this.mobile_number = mobile_number;
+        this.language = language;
+    }
   /*  public RegisterForm(string mobile_number, string password,string c_password, string user_id, string language)
     {
         this.mobile_number = mobile_number;

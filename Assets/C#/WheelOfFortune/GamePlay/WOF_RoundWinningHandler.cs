@@ -81,7 +81,9 @@ namespace WOF.Gameplay
         }
         public void OnWin(object o)
         {
-            int wheelNo = UnityEngine.Random.Range(0, 20);
+            DiceWinNos winData = Utility.Utility.GetObjectOfType<DiceWinNos>(o);
+            int wheelNo = winData.winningSpot;
+            // int wheelNo = UnityEngine.Random.Range(0, 20);
             
             if(wheelNo % 2 == 0)
             {
@@ -95,6 +97,7 @@ namespace WOF.Gameplay
             {
                 randNo = 2;
             }
+
             if(PreviousWinValue.Count > 11)
             {
                 PreviousWinValue.RemoveAt(0);
