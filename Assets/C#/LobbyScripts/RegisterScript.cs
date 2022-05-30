@@ -77,7 +77,7 @@ public class RegisterScript : MonoBehaviour
                 string device_id = SystemInfo.deviceUniqueIdentifier;
                 ShowMessageText.gameObject.SetActive(false);
                 // RegisterForm form = new RegisterForm(MobileNo.text, Password.text, ReEnterPassword.text,UserDetail.UserId, "en");
-                RegisterForm form = new RegisterForm("monica22patel@gmail.com", Password.text, Password.text, "monica", MobileNo.text, "en");
+                RegisterForm form = new RegisterForm("monica22patel@gmail.com", Password.text, Password.text, "monica", "5874879531", "en");
                 StartCoroutine(WebRequestHandler.instance.RegisterAPI(RegisterURL, EmailId.text, OTP.text));
                 // WebRequestHandler.instance.Post(RegisterURL, JsonUtility.ToJson(form), OnRegisterRequestProcessed);
             // }
@@ -109,29 +109,30 @@ public class RegisterScript : MonoBehaviour
         {
             ShowMessage("Enter Password");
         }
-        else if(String.IsNullOrEmpty(UserName.text) )
-        {
-            ShowMessage("Enter UserName");
-        }
-        else if(String.IsNullOrEmpty(MobileNo.text))
-        {
-            ShowMessage("Enter Mobile No");
-        }
+        // else if(String.IsNullOrEmpty(UserName.text) )
+        // {
+        //     ShowMessage("Enter UserName");
+        // }
+        // else if(String.IsNullOrEmpty(MobileNo.text))
+        // {
+        //     ShowMessage("Enter Mobile No");
+        // }
         else
         {
 
             Debug.Log("data entered  ");
             string device_id = SystemInfo.deviceUniqueIdentifier;
             // RegisterForm form = new RegisterForm(MobileNo.text, device_id,Password.text, ReEnterPassword.text,"en");
-            RegisterForm form = new RegisterForm(MobileNo.text, Password.text, ReEnterPassword.text,UserDetail.UserId, "en");
+            RegisterForm form = new RegisterForm("5874598745", Password.text, ReEnterPassword.text,UserDetail.UserId, "en");
             // WebRequestHandler.instance.Post(OTPURL, JsonUtility.ToJson(form), OnOtpVerifyRequestProcessed);
-            StartCoroutine(WebRequestHandler.instance.GetOTP(OTPURL, EmailId.text, Password.text, UserName.text, MobileNo.text));
+            StartCoroutine(WebRequestHandler.instance.GetOTP(OTPURL, EmailId.text, Password.text, "dummy", "5874987512"));
         }
     }
 
     public void GetOTPBtn()
     {
-        WebRequestHandler.instance.GetOTP(OTPURL, EmailId.text, Password.text, UserName.text, MobileNo.text);
+        // WebRequestHandler.instance.GetOTP(OTPURL, EmailId.text, Password.text, "dummy", "5874896325");
+        StartCoroutine(WebRequestHandler.instance.GetOTP(OTPURL, EmailId.text, Password.text, "dummy", "5874987512"));
     }
 
 

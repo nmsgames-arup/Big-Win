@@ -219,9 +219,9 @@ namespace Dragon.Gameplay
         }
         IEnumerator cardOpen(int No1,int No2, int rand0, int rand1)
         {
-            StartCoroutine(StartCard1_Animation());
-            StartCoroutine(StartCard2_Animation());
-            yield return new WaitForSeconds(2.0f);
+                        // StartCoroutine(StartCard1_Animation());
+                        // StartCoroutine(StartCard2_Animation());
+            // yield return new WaitForSeconds(2.0f);
             Card1.GetComponent<RectTransform>().sizeDelta = new Vector2(234.0f, 300.0f);
             Card2.GetComponent<RectTransform>().sizeDelta = new Vector2(234.0f, 300.0f);
             Card1.sprite = Card[rand0].card[No1];
@@ -268,8 +268,8 @@ namespace Dragon.Gameplay
             UtilitySound.Instance.Cardflipsound();
             Card1.sprite = TigerBackCard;
             Card2.sprite = ElephantBackCard;
-            Card1.GetComponent<RectTransform>().sizeDelta = new Vector2(500.0f, 500.0f);
-            Card2.GetComponent<RectTransform>().sizeDelta = new Vector2(500.0f, 500.0f);
+            Card1.GetComponent<RectTransform>().sizeDelta = new Vector2(178.0f, 222.0f);
+            Card2.GetComponent<RectTransform>().sizeDelta = new Vector2(178.0f, 222.0f);
 
         }
         IEnumerator DragonAnimation()

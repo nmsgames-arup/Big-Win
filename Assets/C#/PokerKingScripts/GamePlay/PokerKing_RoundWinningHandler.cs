@@ -129,6 +129,7 @@ namespace PokerKing.Gameplay
             for(int i = 0; i < PreviousWinValue.Count; i++)
             {
                 previousWins[i].enabled = true;
+                // Debug.LogError("name  " + previousWins[i].name + "     " + Card[PreviousWinValue[i]].name );
                 previousWins[i].sprite = Card[PreviousWinValue[i]];
             }
             // WinCard.sprite = Card[winNumber];

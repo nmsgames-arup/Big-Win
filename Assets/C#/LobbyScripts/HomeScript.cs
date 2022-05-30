@@ -41,12 +41,12 @@ public class HomeScript : MonoBehaviour
     private void Start()
     {
         // StartCoroutine(Loading());
-        StartCoroutine(StartWOF_Animation());
-        StartCoroutine(StartTVE_Animation());
-        StartCoroutine(StartLuckyDice_Animation());
-        StartCoroutine(StartLuckyBall_Animation());
-        StartCoroutine(StartPokerKing_Animation());
-        StartCoroutine(StartBackgroundAnimation());
+        // StartCoroutine(StartWOF_Animation());
+        // StartCoroutine(StartTVE_Animation());
+        // StartCoroutine(StartLuckyDice_Animation());
+        // StartCoroutine(StartLuckyBall_Animation());
+        // StartCoroutine(StartPokerKing_Animation());
+        // StartCoroutine(StartBackgroundAnimation());
     }
 
     public IEnumerator StartBackgroundAnimation()

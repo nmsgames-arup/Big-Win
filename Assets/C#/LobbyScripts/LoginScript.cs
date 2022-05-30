@@ -18,7 +18,7 @@ public class LoginScript : MonoBehaviour
     public InputField Password;
     public InputField Mobile;
     public GameObject SignUpPanel;
-    string LoginURL = "https://jeetogame.in/jeeto_game/WebServices/loginPassword";    
+    string LoginURL =  "http://52.7.28.180:5000/auth/login";    // "https://jeetogame.in/jeeto_game/WebServices/loginPassword";    
     string GuestURL = "https://jeetogame.in/jeeto_game/WebServices/Guestlogin";
     public List<string> _phoneno, _pwd;
     public Dictionary<string, string> _completedata = new Dictionary<string, string>();
@@ -106,6 +106,7 @@ public class LoginScript : MonoBehaviour
     {
         if( !String.IsNullOrEmpty(EmailId.text) || !String.IsNullOrEmpty(Password.text) )
         {
+            // Debug.LogError("Login btn new....");
             StartCoroutine(WebRequestHandler.instance.LoginAPI(LoginURL, EmailId.text, Password.text ));
         }
     }

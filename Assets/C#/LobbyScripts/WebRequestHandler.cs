@@ -147,6 +147,7 @@ namespace Com.BigWin.WebUtils
                 }
                 else
                 {
+                    Debug.Log("registered ...");
                     RegisterScript.Instance.RegisterPanel.SetActive(false);
                 }
             }
@@ -158,6 +159,8 @@ namespace Com.BigWin.WebUtils
             form.AddField("email", email);
             form.AddField("password", password);
 
+            // Debug.LogError("email  " + email + "  pwd  " + password);
+
             using (UnityWebRequest www = UnityWebRequest.Post(registerURL, form))
             {
                 yield return www.SendWebRequest();
@@ -168,6 +171,7 @@ namespace Com.BigWin.WebUtils
                 }
                 else
                 {
+                    Debug.Log("Logged ");
                     PlayerPrefs.SetString("email", email);
                     PlayerPrefs.SetString("password", password);
                     LoginScript.Instance.ShowLoginUI();

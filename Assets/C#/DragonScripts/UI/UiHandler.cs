@@ -87,9 +87,9 @@ namespace Dragon.UI
             // balance = float.Parse(LocalPlayer.balance);
             balance = 10000f;
             UpdateUi();
-            StartCoroutine(StartCharacterAnimation());
-            StartCoroutine(StartTigerAnimation());
-            StartCoroutine(StartElephantAnimation());
+                        // StartCoroutine(StartCharacterAnimation());
+                        // StartCoroutine(StartTigerAnimation());
+                        // StartCoroutine(StartElephantAnimation());
             // StartCoroutine(Loading());
         }
 
