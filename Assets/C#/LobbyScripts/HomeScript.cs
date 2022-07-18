@@ -31,6 +31,8 @@ public class HomeScript : MonoBehaviour
     public Image LuckyBall_img;
     public Sprite[] PokerKing_Frames;
     public Image PokerKing_img;
+    public Sprite[] ComingSoonFrames;
+    public Image ComingSoon_img;
     public Text _loadingTxt;
     public Sprite[] BackgroundFrames;
     public Image BackgroundImage;
@@ -41,12 +43,13 @@ public class HomeScript : MonoBehaviour
     private void Start()
     {
         // StartCoroutine(Loading());
-        // StartCoroutine(StartWOF_Animation());
-        // StartCoroutine(StartTVE_Animation());
-        // StartCoroutine(StartLuckyDice_Animation());
-        // StartCoroutine(StartLuckyBall_Animation());
-        // StartCoroutine(StartPokerKing_Animation());
-        // StartCoroutine(StartBackgroundAnimation());
+         StartCoroutine(StartWOF_Animation());
+        StartCoroutine(StartTVE_Animation());
+        StartCoroutine(StartLuckyDice_Animation());
+        StartCoroutine(StartLuckyBall_Animation());
+        StartCoroutine(StartPokerKing_Animation());
+        StartCoroutine(StartComingSoon_Animation());
+        StartCoroutine(StartBackgroundAnimation());
     }
 
     public IEnumerator StartBackgroundAnimation()
@@ -120,6 +123,16 @@ public class HomeScript : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
         StartCoroutine(StartPokerKing_Animation());
+    }
+    public IEnumerator StartComingSoon_Animation()
+    {
+        ComingSoon_img.gameObject.SetActive(true);
+        foreach (var item in ComingSoonFrames)
+        {
+            ComingSoon_img.sprite = item;
+            yield return new WaitForSeconds(0.05f);
+        }
+        StartCoroutine(StartComingSoon_Animation());
     }
 
     IEnumerator Loading()

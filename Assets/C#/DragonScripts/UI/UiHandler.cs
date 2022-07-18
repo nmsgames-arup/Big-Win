@@ -48,10 +48,14 @@ namespace Dragon.UI
         public Text tieBetsTxt;
         public Sprite[] characterFrames;
         public Image characterImg;
-        public Sprite[] TigerFrames;
+        /*public Sprite[] TigerFrames;
         public Image TigerImg;
         public Sprite[] ElephantFrames;
         public Image ELephantImg;
+        */
+        public Sprite[] TigerElephantFrames;
+        public Image TigerElephantImg;
+
         public Sprite[] StartingVS_Frames;
         public Image StartingVS_Img, StartAnimation_Panel;
         public Sprite[] ServerImage_Frames;
@@ -112,7 +116,7 @@ namespace Dragon.UI
             StartCoroutine(StartCharacterAnimation());
         }
 
-        public IEnumerator StartTigerAnimation()
+        /*public IEnumerator StartTigerAnimation()
         {
             TigerImg.gameObject.SetActive(true);
             foreach (var item in TigerFrames)
@@ -132,7 +136,19 @@ namespace Dragon.UI
                 yield return new WaitForSeconds(0.08f);
             }
             StartCoroutine(StartElephantAnimation());
+        }*/
+        // newly Added code for T and E Anim
+        public IEnumerator StartTigerElephantAnimation()
+        {
+            TigerElephantImg.gameObject.SetActive(true);
+            foreach (var item in TigerElephantFrames)
+            {
+                TigerElephantImg.sprite = item;
+                yield return new WaitForSeconds(0.08f);
+            }
+            StartCoroutine(StartTigerElephantAnimation());
         }
+
         public IEnumerator StartVS_Animation()
         {
             StartAnimation_Panel.gameObject.SetActive(true);

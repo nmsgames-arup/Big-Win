@@ -133,6 +133,8 @@ public class RegisterScript : MonoBehaviour
     {
         // WebRequestHandler.instance.GetOTP(OTPURL, EmailId.text, Password.text, "dummy", "5874896325");
         StartCoroutine(WebRequestHandler.instance.GetOTP(OTPURL, EmailId.text, Password.text, "dummy", "5874987512"));
+        Debug.Log("request for register mail:" + EmailId.text);
+        Debug.Log("request for register pass:" + Password.text);
     }
 
 

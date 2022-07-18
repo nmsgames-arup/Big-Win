@@ -36,6 +36,11 @@ namespace PokerKing.UI
         public Image placeBets;
         public Sprite[] placeBets_Frames;
         public Sprite[] stopBets_Frames;
+
+        // newly Added for Character Animation
+        public Sprite[] CharacterFrames;
+        public Image CharacterImg;
+
         public GameObject[] chipimg;
         public Image loadingpnel;
         bool isLoading = true;
@@ -269,6 +274,18 @@ namespace PokerKing.UI
             placeBets.sprite = startBetting;
             yield return new WaitForSeconds(.5f);
             // placeBets.gameObject.SetActive(false);
+        }
+
+        // for character Animation
+        public IEnumerator StartCharacterAnimation()
+        {
+            CharacterImg.gameObject.SetActive(true);
+            foreach (var item in CharacterFrames)
+            {
+                CharacterImg.sprite = item;
+                yield return new WaitForSeconds(0.08f);
+            }
+            StartCoroutine(StartCharacterAnimation());
         }
 
         public void UpDateBets(Spots spot, Chip chip)

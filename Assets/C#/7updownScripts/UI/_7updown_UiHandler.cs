@@ -65,6 +65,7 @@ namespace Updown7.UI
         public Text LeftBetsTxt, MiddleBetsTxt, RightBetsTxt;
         public GameObject QuitPanel;
 
+        
         private void Awake()
         {
             Instance = this;
@@ -435,6 +436,8 @@ namespace Updown7.UI
             yield return new WaitForSeconds(0.5f);
             // placeBets.gameObject.SetActive(false);
         }
+
+       
 
         public Image loadingpnel;
         public Image loadingImag;

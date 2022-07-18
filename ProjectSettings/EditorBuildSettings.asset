@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 0f1b75f79a9bd624ca04e9d7a6432f55
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AndarBahar.unity
     guid: bd4c5f04f5e3f54428b943469bdd47b8
   - enabled: 1
